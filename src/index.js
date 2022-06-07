@@ -5,34 +5,46 @@ import './index.css';
 
 class HeaderTop extends React.Component {
   render() {
-    /* 
-    * TEST
-    ? TEST
-    ! TEST
-    TODO TEST
-    @param TEST
-    red
-     */
+    return(
+      <div></div>
+    )
+  }
+}
+function Detail(props) {
+  console.log(props);
+  return (
+    <button
+    onClick={props.onClick}
+    >
+      {props.value}
+    </button>
+  );
+}
+
+class Container extends React.Component {
+  render() {
     console.log("");
     console.log("data");
-    console.dir(data[0].create_date);
     console.log(data[0].create_date);
-    console.log("🚀 ~ file: index.js ~ line 20 ~ HeaderTop ~ render ~ data[0].create_date", data[0].create_date)
     console.log("");
     const list_value = (data[0].game_list).map((value, i) => {
-      console.log(value);
+      console.log("🚀 ~ file: index.js ~ line 32 ~ Container ~ constlist_value= ~ this", this)
+      console.dir(this);
       console.log(i);
       return (
-      <li key={i} className="item">
-        {value.game_name}
-        <p>rank : {value.rank}</p>
-        <p>standard : {value.standard}</p>
-      </li>
+        <li key={i} className="item">
+          <Detail
+          value = {value.game_name}
+          onClick={() => this.props.onClick(value.game_name)}
+          />
+          <p>rank : {value.rank}</p>
+          <p>standard : {value.standard}</p>
+        </li>
       )
     });
     
     return (
-      <div id="header_top" >
+      <div id="container" >
         <div className="rank_date">{data[0].create_date}</div>
         <ul id="list">
         {list_value}
@@ -45,7 +57,10 @@ class HeaderTop extends React.Component {
 class Root extends React.Component {
   render() {
     return (
-      <HeaderTop />
+      <>
+        <HeaderTop />
+        <Container />
+      </>
     );
   }
 }
