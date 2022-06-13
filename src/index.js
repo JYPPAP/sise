@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import data from './sise.json';
+import game_list from './game_list.json';
+import server_list from './server_list.json';
+import './reset.css';
 import './index.css';
 
 class HeaderTop extends React.Component {
@@ -14,15 +16,28 @@ class HeaderTop extends React.Component {
     )
   }
 }
-class HeaderTab extends React.Component {
+class MenuTab extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      checkedMenu: "home",
+    };
+    this.handleclick = this.handleClick.bind(this);
+  }
+  handleClick(props) {
+    console.log("");
+    console.log("this.props");
+    console.log(props.target.className);
+  }
+
   render() {
     return(
       <>
-        <ul id="header_tab">
-          <li className="home">홈</li>
-          <li className="search_game">게임검색</li>
-          <li className="favorite_game">관심게임</li>
-          <li className="trade_rank">거래순위</li>
+        <ul id="menu_tab">
+          <li className="home" onClick={this.handleClick} >홈</li>
+          <li className="search_game" onClick={this.handleClick}>게임검색</li>
+          <li className="favorite_game" onClick={this.handleClick}>관심게임</li>
+          <li className="trade_rank" onClick={this.handleClick}>거래순위</li>
         </ul>
         <div id="tab_indicate"></div>
       </>
@@ -31,37 +46,24 @@ class HeaderTab extends React.Component {
 }
 
 function Detail(props) {
+  console.log("props: " +props.value);
   console.log(props);
   return (
-    <button
-    onClick={props.onClick}
-    >
-      {props.value}
-    </button>
+    <a href="javascript:;" className="home_link" children={props.value} />
   );
 }
 
 class Container extends React.Component {
   render() {
-    console.log("");
-    console.log("data");
-    console.log(data[0].create_date);
-    console.log("");
     let j=1;
-    const list_value = (data[0].game_list).map((value, i) => {
-      // console.log("🚀 ~ file: index.js ~ line 32 ~ Container ~ constlist_value= ~ this", this)
-      // console.dir(this);
-      // console.log(i);
-      console.log("j");
-      console.log(j);
-      
+    const list_value = (game_list).map((value, i) => {
       if(j > 12)return;
       j++;
       return (
         <li key={i} className="item">
           <Detail
           value = {value.game_name}
-          // onClick={() => this.props.onClick(value.game_name)}
+          onClick={() => this.props.onClick(this.props)}
           />
           {/* <p>rank : {value.rank}</p>
           <p>standard : {value.standard}</p> */}
@@ -87,14 +89,12 @@ class Root extends React.Component {
     return (
       <>
         <HeaderTop />
-        <HeaderTab />
+        <MenuTab />
         <Container />
       </>
     );
   }
 }
-
-
 
 // ============================
 const root = ReactDOM.createRoot(document.getElementById("root"));
