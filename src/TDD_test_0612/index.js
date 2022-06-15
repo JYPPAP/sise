@@ -1,9 +1,12 @@
 function refineText(source, options) {
-  return [normalizeWhiteSpace, compactWhiteSpace, maskBannedWords].reduce(
+  return [normalizeWhiteSpace, compactWhiteSpace, maskBannedWords, trimWhiteSpace].reduce(
     (value, filter) => filter(value, options), source
   );
 }
 
+function trimWhiteSpace(source) {
+  return source = source.trim();
+}
 function compactWhiteSpace(source) {
   return source.indexOf("  ") < 0 
   ? source 
