@@ -35,6 +35,8 @@ tab_bar에 transition을 추가했기 때문에 tab_bar에 클래스를 추가하는 방식을 이용해
 container의 subtitle은 아이콘과 "대표 게임" 텍스트가 출력된다.
 그 아래로 list 와 item이 출력된다.
 item을 클릭하면 해당 게임의 서버 목록 창으로 이동한다.
+	- 서버 목록으로는 어떻게 이동시키지?
+		- data-game에 DB에서 가져온 값 또는 textContent를 읽어서 검색한 뒤 넣어주면 될 것 같은데
 최하단에는 배너가 출력된다.
 
 container는 p10

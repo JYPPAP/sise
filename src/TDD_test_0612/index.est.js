@@ -50,7 +50,7 @@ test.each`
   ${"hello mockist"} | ${["mockist", "purist"]} | ${"hello *******"}
   ${"hello purist"} | ${["mockist", "purist"]} | ${"hello ******"}
 `('sut transforms "$source" to "$expected"', ({source, bannedWords, expected }) => {
-  const actual = sut(source, { bannedWords});
+  const actual = sut(source, { bannedWords });
   expect(actual).toBe(expected);
 });
 
