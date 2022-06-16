@@ -3,7 +3,7 @@ body {
 }
 
 #root {
-  width: 320px;
+  width: 360px;
   margin: 0 auto;
   background-color: #666
 }
@@ -81,15 +81,15 @@ body {
   left: 0
 }
 
-#tab_indicate.search_game::after {
+#tab_indicate.search::after {
   left: 25%
 }
 
-#tab_indicate.favorite_game::after {
+#tab_indicate.favorite::after {
   left: 50%
 }
 
-#tab_indicate.trade_rank::after {
+#tab_indicate.rank::after {
   left: 75%
 }
 
@@ -105,17 +105,28 @@ body {
   background-color: #aaa
 }
 
-.icon_home {
+.icon_wrap {
   margin-bottom: 10px
+}
+.icon{
+  display: inline-block;
+  width: 20px;
+  background-color: #fff;
 }
 
 .item {
   display: inline-block;
-  width: 135px;
+  width: 165px;
   height: 30px;
   margin: 0 10px 10px 0;
+  padding: 6px;
+  border: 1px solid #000;
   text-align: center;
-  font-size: 12px
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
 .item:nth-child(2n) {
