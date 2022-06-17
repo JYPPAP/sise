@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import game_list from './game_list.json';
-// import server_list from './server_list.json';
+import server_list from './server_list.json';
 import './reset.css';
 import './index.css';
 import './loading.css';
