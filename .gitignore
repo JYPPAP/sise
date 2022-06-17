@@ -22,3 +22,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 src/sise_json.CSV
+src/세미나/TDD_test_0612/node_modules/
