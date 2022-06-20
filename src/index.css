@@ -1,11 +1,11 @@
 body {
-  background-color: #333
+  background-color: #333;
 }
 
 #root {
   width: 360px;
   margin: 0 auto;
-  background-color: #666
+  background-color: #666;
 }
 
 #header_top {
@@ -14,14 +14,24 @@ body {
   height: 60px;
   padding: 10px;
   background: #03ce88;
-  background: linear-gradient(0deg, rgba(3, 206, 136, 1) 0, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(3, 206, 136, 1) 0,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+#header_top svg {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
 }
 
 .link {
   float: left;
   width: 40px;
   height: 40px;
-  background-color: #aaa
+  background-color: #aaa;
 }
 
 .logo {
@@ -33,7 +43,7 @@ body {
   width: 40px;
   height: 40px;
   background-color: #ccc;
-  align-items: flex-end
+  align-items: flex-end;
 }
 
 #tab_indicate {
@@ -41,7 +51,7 @@ body {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #fff
+  background-color: #fff;
 }
 
 #tab_indicate::after {
@@ -49,8 +59,8 @@ body {
   width: 25%;
   height: 2px;
   background-color: #ff2c2c;
-  content: '';
-  transition: all .3s
+  content: "";
+  transition: all 0.3s;
 }
 
 #menu_tab {
@@ -59,57 +69,57 @@ body {
   height: 30px;
   padding: 5px 0;
   background-color: #ccc;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
-#menu_tab>li {
+#menu_tab > li {
   width: 25%;
   height: 100%;
   text-align: center;
-  border-right: 1px solid #000
+  border-right: 1px solid #000;
 }
 
-#menu_tab>li:last-child {
-  border-right: none
+#menu_tab > li:last-child {
+  border-right: none;
 }
 
 #tab_indicate::after {
-  left: 0
+  left: 0;
 }
 
 #tab_indicate.home::after {
-  left: 0
+  left: 0;
 }
 
 #tab_indicate.search::after {
-  left: 25%
+  left: 25%;
 }
 
 #tab_indicate.favorite::after {
-  left: 50%
+  left: 50%;
 }
 
 #tab_indicate.rank::after {
-  left: 75%
+  left: 75%;
 }
 
 #container {
   width: 100%;
   padding: 10px;
   background-color: #000;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .cont {
   width: 100%;
-  background-color: #aaa
+  background-color: #aaa;
 }
 
 .icon_wrap {
   height: 20px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
-.icon{
+.icon {
   display: inline-block;
   width: 20px;
   background-color: #fff;
@@ -127,18 +137,17 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
 
 .item:nth-child(2n) {
-  margin-right: 0
+  margin-right: 0;
 }
 
 .item button {
   width: 100%;
   height: 100%;
   padding: 10px 0;
-  line-height: 10px
+  line-height: 10px;
 }
 
 /* home_button */
