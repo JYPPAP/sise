@@ -1,7 +1,7 @@
 import React from "react";
 // import server_list from "./.json";
 
-const GameList = () => {
+const Games = () => {
   return (
     <div>
       <h1>게임 목록을 띄워주는 서브 페이지 입니다.</h1>
@@ -9,4 +9,4 @@ const GameList = () => {
   );
 };
 
-export default GameList;
+export default Games;

@@ -1,63 +1,87 @@
-import React, { useState } from "react";
-import Games from "./Games.js";
-import GameList from "./GameList.js";
+import React from "react";
+import { Link } from "react-router-dom";
+import { getGameList } from "./game_data.js";
 
-// const Container = ({ tab, sub, setSub }) => {
-  // if (!Boolean(sub)) {
-  //   switch (tab) {
-  //     case "search":
-  //       return <SearchList tab={tab} setSub={setSub} />;
-  //     case "favorite":
-  //       return <FavoriteList tab={tab} setSub={setSub} />;
-  //     case "rank":
-  //       return <RankList tab={tab} setSub={setSub} />;
-  //     case "home":
-  //     default:
-  //       return <HomeList tab={tab} setSub={setSub} />;
-  //   }
-  // } else {
-  //   switch (sub) {
-  //     case "game":
-  //       return <Games sub={sub} setSub={setSub} />;
-  //     case "server":
-  //       return <ServerList sub={sub} setSub={setSub} />;
-  //     default:
-  //       return;
-  //   }
-  // }
-// }
+const Container = ({ tab }) => {
+  const gamelist = getGameList();
+  let tabContainer;
+  switch (tab) {
+    case "search":
+      tabContainer = <SearchList list={gamelist} tab={tab} />;
+      break;
+    case "favorite":
+      tabContainer = <FavoriteList list={gamelist} tab={tab} />;
+      break;
+    case "rank":
+      tabContainer = <RankList list={gamelist} tab={tab} />;
+      break;
+    case "home":
+    default:
+      tabContainer = <HomeList list={gamelist} tab={tab} />;
+  }
 
-const Container = () => {
   return (
-    <div>Container 입니다.</div>
+    <div id="container">
+      <div className="cont">
+        {tabContainer}
+      </div>
+    </div>
   );
-}
+};
 
-function HomeList({ tab, setSub }) {
-  const list_value = GameList.slice(0, 12).map((item, i) => {
+function HomeList({ navigate, list, tab }) {
+  const list_value = list.slice(0, 12).map((item, i) => {
     return (
-      <li key={i} className="item" onClick={() => setSub("game")}>
-        {item.game_name}
+      <li key={i} onClick={() => navigate(`/games${item.name}`, { tab })} className="item">
+        {item.name}
       </li>
     );
   });
   return (
-    <div id="container">
-      <div className="cont">
-        <IconWrap tab={tab} />
-        <ul id="list">{list_value}</ul>
-      </div>
+    <div className="cont">
+      <IconWrap tab={tab} />
+      <ul id="home_list">{list_value}</ul>
     </div>
   );
 }
-function SearchList({ tab, setTab }) {
-  return <div id="container"></div>;
+function SearchList({ list, tab }) {
+  const list_value = list.map((item, i) => {
+    return (
+      <Link to={`/games/:${item.name}`} key={i} tab={tab} className="item">
+        {item.name}
+      </Link>
+    );
+  });
+
+  return (
+    <div className="cont">
+      <ul id="search_list">{list_value}</ul>
+    </div>
+  );
 }
-function FavoriteList({ tab, setTab }) {
-  return <div id="container"></div>;
+function FavoriteList({ tab }) {
+  return (
+    <div className="cont">
+      <IconWrap tab={tab} />
+      <ul id="list">{"list_value"}</ul>
+    </div>
+  );
 }
-function RankList({ tab, setTab }) {
-  return <div id="container"></div>;
+function RankList({ tab }) {
+  return (
+    <div className="cont">
+      <IconWrap tab={tab} />
+      <ul id="list">{"list_value"}</ul>
+    </div>
+  );
+}
+
+function getToday() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = ("0" + (1 + date.getMonth())).slice(-2);
+  const day = ("0" + date.getDate()).slice(-2);
+  return year + "년 " + month + "월 " + day + "일 순위";
 }
 
 function IconWrap({ tab }) {
@@ -67,7 +91,7 @@ function IconWrap({ tab }) {
       subTitle = "관심 게임";
       break;
     case "rank":
-      subTitle = "2022년 06월 16일 순위";
+      subTitle = getToday();
       break;
     case "home":
     default:

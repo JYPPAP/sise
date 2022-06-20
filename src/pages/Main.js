@@ -1,33 +1,16 @@
-import React from "react";
-import MenuTab from './MenuTab';
-import Container from './Container';
-
-// const App = () => {
-//   const [isReady, setIsReady] = useState(true);
-//   const [tab, setTab] = useState("home");
-//   const [sub, setSub] = useState("");
-//   if (isReady === true) {
-//     return (
-//       <>
-//         <HeaderTop tab={tab} setTab={setTab} sub={sub} />
-//         <MenuTab tab={tab} setTab={setTab} sub={sub} />
-//         <Container tab={tab} sub={sub} setSub={setSub} />
-//       </>
-//     );
-//   } else {
-//     return <Loading setIsReady={setIsReady} />;
-//   }
-// };
+import React, { useState } from "react";
+import MenuTab from "./MenuTab";
+import Container from "./Container";
 
 const Main = () => {
+  const [tab, setTab] = useState("");
+  console.log("Main -> tab");
+  console.log(tab);
   return (
     <>
-      <MenuTab />
-      {/* <Con /> */}
+      <MenuTab tab={tab} setTab={setTab} />
+      <Container tab={tab} />
     </>
-    // <div>
-    //   <h1>메인 페이지 입니다.</h1>
-    // </div>
   );
 };
 
