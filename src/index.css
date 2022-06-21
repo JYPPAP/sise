@@ -5,7 +5,7 @@ body {
 #root {
   width: 360px;
   margin: 0 auto;
-  background-color: #666;
+  background-color: #ccc;
 }
 
 #header_top {
@@ -20,6 +20,9 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
 }
+svg {
+  fill: #000;
+}
 
 #header_top svg {
   width: 100%;
@@ -27,23 +30,27 @@ body {
   padding: 10px;
 }
 
-.link {
-  float: left;
+.link,
+.back {
   width: 40px;
   height: 40px;
-  background-color: #aaa;
+  /* background-color: #aaa; */
 }
 
-.logo {
+.logo,
+.title {
   width: calc(100% - 80px);
-  background-color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #888; */
 }
 
-.config_app {
+.config_app,
+.star {
   width: 40px;
   height: 40px;
-  background-color: #ccc;
-  align-items: flex-end;
+  /* background-color: #ccc; */
 }
 
 #tab_indicate {
@@ -68,7 +75,7 @@ body {
   width: 100%;
   height: 30px;
   padding: 5px 0;
-  background-color: #ccc;
+  background-color: #aaa;
   box-sizing: border-box;
 }
 
@@ -105,28 +112,41 @@ body {
 
 #container {
   width: 100%;
+  height: calc(100vh - 92px);
   padding: 10px;
-  background-color: #000;
+  /* background-color: #000; */
   box-sizing: border-box;
 }
 
 .cont {
   width: 100%;
-  background-color: #aaa;
+  /* background-color: #aaa; */
 }
 
 .icon_wrap {
+  display: flex;
   height: 20px;
   margin-bottom: 10px;
+  align-items: center;
 }
 .icon {
   display: inline-block;
   width: 20px;
+  margin-right: 10px;
   background-color: #fff;
 }
 
 .item {
   height: 30px;
+}
+
+.item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #home_list .item {
@@ -138,18 +158,49 @@ body {
   border: 1px solid #000;
   text-align: center;
   font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 #home_list .item:nth-child(2n) {
   margin-right: 0;
 }
 
+.search_wrap {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.search_icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 11px;
+  left: 12px;
+}
+
+.search_icon svg {
+  fill: #ccc;
+}
+
+#search_bar {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 0 16px 0 36px;
+}
+
 #search_list {
-  height: 600px;
+  height: calc(100vh - 174px);
   overflow-y: scroll;
+  scrollbar-width: thin;
+}
+#search_list::-webkit-scrollbar {
+  width: 8px;
+}
+#search_list::-webkit-scrollbar-thumb {
+  border-radius: 16px;
 }
 
 #search_list .item {
@@ -172,4 +223,65 @@ body {
   border: 1px solid #000;
   font-size: 10px;
   line-height: 24px;
+}
+
+#rank_list {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 144px);
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+#rank_list::-webkit-scrollbar {
+  width: 8px;
+}
+#rank_list::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+}
+
+#rank_list li {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  background-color: #666;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+#rank_list li:first-child {
+  border-bottom: none;
+  margin-bottom: 5px;
+}
+
+.rank {
+  width: 60px;
+}
+.name {
+  width: calc(100% - 120px);
+}
+.change {
+  display: flex;
+  width: 120px;
+  justify-content: center;
+  position: relative;
+}
+
+.change svg {
+  position: absolute;
+  width: 14px;
+  top: 0;
+  left: 15px;
+}
+.ChangeUp {
+  fill: #f00;
+}
+svg.ChangeDown {
+  top: -3px;
+  fill: #00f;
+}
+.ChangeNone {
+  fill: #666;
 }

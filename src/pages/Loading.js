@@ -7,7 +7,7 @@ const Loading = ({ setIsReady }) => {
   onClick={() => setIsReady(true)}
   */
   return (
-    <div class="loading_wrap">
+    <div className="loading_wrap">
       <div className="load-dots">
         <div className="load-dot"></div>
         <div className="load-dot"></div>

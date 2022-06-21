@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./pages/Loading";
 import HeaderTop from "./pages/HeaderTop";
@@ -9,30 +9,13 @@ import PrivateInfo from "./pages/PrivateInfo";
 import Servers from "./pages/Servers";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  // const [tab, setTab] = useState("home");
+  const [tab, setTab] = useState("rank");
 
-  const mainApi = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch('api url', {
-        method: 'POST',
-        headers: {
-          Accept: 'application.json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(),
-      });
-      const result = await response.json();
-      console.log('mainData', result);
-      setLoading(false);
-    } catch (error) {
-      window.alert(error);
-    }
-  };
-
-  useEffect(() => {
-    mainApi();
-  }, []);
+  setInterval(() => {
+    setLoading(false);
+  },2000);
 
   if(loading) {
     return <Loading />
@@ -40,7 +23,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HeaderTop />}>
-        <Route index element={<Main />} />
+        <Route index element={<Main tab={tab} setTab={setTab}/>} />
         <Route path="/games" element={<Games />}>
           <Route path=":gameId" element={<Servers />} />
         </Route>
