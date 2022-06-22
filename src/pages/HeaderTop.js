@@ -1,9 +1,17 @@
 import React from "react";
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 
 const HeaderTop = () => {
   const location = useLocation();
   let navigate = useNavigate();
+  const params = useParams();
+  console.log("🚀 ~ file: HeaderTop.js ~ line 8 ~ HeaderTop ~ params");
+  console.log(params);
+  
+  
+  console.log("🚀 ~ file: HeaderTop.js ~ line 6 ~ HeaderTop ~ location");
+  console.log(location);
+  
 
   if (location.pathname === "/") {
     return (
@@ -32,11 +40,11 @@ const HeaderTop = () => {
       case "/settings":
         title = "설정";
         break;
-      case "games":
-        title = "game";
+      case "/games":
+        title = params.gameName;
         break;
       default:
-        title = "404";
+        title = params.gameName;
         break;
     }
     headerTop = (

@@ -1,11 +1,10 @@
 body {
-  background-color: #333;
+  background-color: #eee;
 }
 
 #root {
   width: 360px;
   margin: 0 auto;
-  background-color: #ccc;
 }
 
 #header_top {
@@ -16,8 +15,8 @@ body {
   background: #03ce88;
   background: linear-gradient(
     0deg,
-    rgba(3, 206, 136, 1) 0,
-    rgba(0, 212, 255, 1) 100%
+    rgba(0, 212, 255, 1) 0,
+    rgba(3, 206, 136, 1) 100%
   );
 }
 svg {
@@ -34,7 +33,6 @@ svg {
 .back {
   width: 40px;
   height: 40px;
-  /* background-color: #aaa; */
 }
 
 .logo,
@@ -43,14 +41,12 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #888; */
 }
 
 .config_app,
 .star {
   width: 40px;
   height: 40px;
-  /* background-color: #ccc; */
 }
 
 #tab_indicate {
@@ -58,14 +54,13 @@ svg {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #fff;
 }
 
 #tab_indicate::after {
   position: absolute;
   width: 25%;
   height: 2px;
-  background-color: #ff2c2c;
+  background-color: #2c53ff;
   content: "";
   transition: all 0.3s;
 }
@@ -75,7 +70,7 @@ svg {
   width: 100%;
   height: 30px;
   padding: 5px 0;
-  background-color: #aaa;
+  background-color: #ccc;
   box-sizing: border-box;
 }
 
@@ -114,13 +109,11 @@ svg {
   width: 100%;
   height: calc(100vh - 92px);
   padding: 10px;
-  /* background-color: #000; */
   box-sizing: border-box;
 }
 
 .cont {
   width: 100%;
-  /* background-color: #aaa; */
 }
 
 .icon_wrap {
@@ -155,7 +148,9 @@ svg {
   height: 30px;
   margin: 0 10px 10px 0;
   padding: 6px;
-  border: 1px solid #000;
+  border: 1px solid #8396a5;
+  border-radius: 5px;
+  background-color: #a7bfd1;
   text-align: center;
   font-size: 14px;
 }
@@ -208,7 +203,7 @@ svg {
   width: 100%;
   height: 40px;
   padding: 12px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #999;
   align-items: center;
 }
 
@@ -216,16 +211,30 @@ svg {
   border-top: none;
 }
 /* home_button */
-.home_link {
+/* .home_link {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #000;
   font-size: 10px;
   line-height: 24px;
+} */
+
+#favorite_list li {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border-top: 1px solid #999;
+  line-height: 22px;
+}
+#favorite_list li:first-child {
+  border-top: none;
+  margin-top: 15px;
 }
 
-#rank_list {
+
+#favorite_list, #rank_list {
   display: flex;
   width: 100%;
   height: calc(100vh - 144px);
@@ -246,10 +255,9 @@ svg {
   width: 100%;
   height: 40px;
   padding: 8px;
-  background-color: #666;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #999;
 }
 #rank_list li:first-child {
   border-bottom: none;
@@ -284,4 +292,53 @@ svg.ChangeDown {
 }
 .ChangeNone {
   fill: #666;
+}
+
+.modal_wrap {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  position: relative;
+  width: 80%;
+  height: 200px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 25px;
+}
+.modal_title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.modal_text {
+  font-size: 14px;
+}
+.modal_btn_wrap {
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  line-height: 26px;
+  text-align: center;
+}
+.modal_btn {
+  width: 60px;
+  display: inline-block;
+  background-color: #fff;
+  border: none;
+  color: #005a17;
+  font-weight: bold;
+}
+
+.modal_confirm {
+  margin-left: 30px;
 }

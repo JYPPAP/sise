@@ -1,7 +1,7 @@
 let serverlist = [
   {
     server_name: "니나브",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 7530 },
       { date: "2022-06-11", price: 7700 },
       { date: "2022-06-10", price: 7590 },
@@ -17,11 +17,12 @@ let serverlist = [
       { date: "2022-05-31", price: 7530 },
       { date: "2022-05-30", price: 7390 },
       { date: "2022-05-29", price: 7410 },
+      { date: "2022-05-28", price: 6910 },
     ],
   },
   {
     server_name: "실리안",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 7120 },
       { date: "2022-06-11", price: 7260 },
       { date: "2022-06-10", price: 7230 },
@@ -37,11 +38,12 @@ let serverlist = [
       { date: "2022-05-31", price: 7060 },
       { date: "2022-05-30", price: 6870 },
       { date: "2022-05-29", price: 6910 },
+      { date: "2022-05-28", price: 6910 },
     ],
   },
   {
     server_name: "카단",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 7230 },
       { date: "2022-06-11", price: 7330 },
       { date: "2022-06-10", price: 7300 },
@@ -57,11 +59,12 @@ let serverlist = [
       { date: "2022-05-31", price: 7130 },
       { date: "2022-05-30", price: 7130 },
       { date: "2022-05-29", price: 7290 },
+      { date: "2022-05-28", price: 6990 },
     ],
   },
   {
     server_name: "아만",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 7370 },
       { date: "2022-06-11", price: 7410 },
       { date: "2022-06-10", price: 7310 },
@@ -77,11 +80,12 @@ let serverlist = [
       { date: "2022-05-31", price: 7220 },
       { date: "2022-05-30", price: 7020 },
       { date: "2022-05-29", price: 7100 },
+      { date: "2022-05-28", price: 6900 },
     ],
   },
   {
     server_name: "카마인",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 7290 },
       { date: "2022-06-11", price: 7410 },
       { date: "2022-06-10", price: 7340 },
@@ -97,11 +101,12 @@ let serverlist = [
       { date: "2022-05-31", price: 7010 },
       { date: "2022-05-30", price: 7070 },
       { date: "2022-05-29", price: 7050 },
+      { date: "2022-05-28", price: 6950 },
     ],
   },
   {
     server_name: "루페온",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 6990 },
       { date: "2022-06-11", price: 7120 },
       { date: "2022-06-10", price: 7160 },
@@ -117,11 +122,12 @@ let serverlist = [
       { date: "2022-05-31", price: 6880 },
       { date: "2022-05-30", price: 6730 },
       { date: "2022-05-29", price: 6870 },
+      { date: "2022-05-28", price: 6970 },
     ],
   },
   {
     server_name: "카제로스",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 7510 },
       { date: "2022-06-11", price: 7660 },
       { date: "2022-06-10", price: 7550 },
@@ -137,11 +143,12 @@ let serverlist = [
       { date: "2022-05-31", price: 7110 },
       { date: "2022-05-30", price: 7080 },
       { date: "2022-05-29", price: 7080 },
+      { date: "2022-05-28", price: 6980 },
     ],
   },
   {
     server_name: "아브렐슈드",
-    price_list: [
+    date_price: [
       { date: "2022-06-12", price: 7340 },
       { date: "2022-06-11", price: 7130 },
       { date: "2022-06-10", price: 7380 },
@@ -157,10 +164,11 @@ let serverlist = [
       { date: "2022-05-31", price: 7140 },
       { date: "2022-05-30", price: 6920 },
       { date: "2022-05-29", price: 7100 },
+      { date: "2022-05-28", price: 6900 },
     ],
   },
 ];
 
-export default function GetServerList() {
+export function GetServerList() {
   return serverlist;
 }

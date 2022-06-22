@@ -1,31 +1,35 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { getGameList } from "./game_data.js";
 
 const Container = ({ tab }) => {
   const gamelist = getGameList();
-  const [search, setSearch] = useState("");
+  const [find, setFind] = useState("");
+  const [modal, setModal] = useState("");
+  const [search, setSearch] = useSearchParams();
   let tabContainer;
+
   switch (tab) {
     case "search":
       tabContainer = (
-        <SearchList search={search} setSearch={setSearch} list={gamelist} />
+        <SearchList find={find} setFind={setFind} search={search} setSearch={setSearch} list={gamelist} />
       );
       break;
     case "favorite":
-      tabContainer = <FavoriteList list={gamelist} tab={tab} />;
+      tabContainer = <FavoriteList list={gamelist} tab={tab} search={search} setSearch={setSearch} />;
       break;
     case "rank":
-      tabContainer = <RankList list={gamelist} tab={tab} />;
+      tabContainer = <RankList list={gamelist} tab={tab} setModal={setModal} />;
       break;
     case "home":
     default:
-      tabContainer = <HomeList list={gamelist} tab={tab} />;
+      tabContainer = <HomeList list={gamelist} tab={tab} search={search} setSearch={setSearch} />;
   }
 
   return (
     <div id="container">
-      <div className="cont">{tabContainer}</div>
+      {modal === "" ? null : <RankModal modal={modal} setModal={setModal} />}
+      {tabContainer}
     </div>
   );
 };
@@ -34,27 +38,27 @@ function HomeList({ list, tab }) {
   const list_value = list.slice(0, 12).map((item, i) => {
     return (
       <li key={i} className="item">
-        <Link to={`/games/:${item.name}`} children={item.name} />
+        <Link to={`/games/${item.name}`} children={item.name} />
       </li>
     );
   });
   return (
-    <>
+    <div className="cont">
       <IconWrap tab={tab} />
       <ul id="home_list">{list_value}</ul>
-    </>
+    </div>
   );
 }
 
-function SearchList({ search, setSearch, list }) {
+function SearchList({ find, setFind, list }) {
   const filteredList = list.filter((item) => {
-    return item.name.toLowerCase().includes(search.toLowerCase());
+    return item.name.toLowerCase().includes(find.toLowerCase());
   });
 
   const list_value = filteredList.map((item, i) => {
     return (
       <li key={i} className="item">
-        <Link to={`/games/:${item.name}`} children={item.name} />
+        <Link to={`/games/${item.name}`} children={item.name} />
       </li>
     );
   });
@@ -76,7 +80,7 @@ function SearchList({ search, setSearch, list }) {
           id="search_bar"
           placeholder="게임명을 입력해 주세요."
           onChange={(e) => {
-            setSearch(e.target.value);
+            setFind(e.target.value);
           }}
         />
       </div>
@@ -86,31 +90,56 @@ function SearchList({ search, setSearch, list }) {
 }
 
 function FavoriteList({ tab }) {
+  let favorite_list =
+    "로스트아크,루페온|로스트아크,실리안|로스트아크,니나브|로스트아크,카단";
+  localStorage.setItem("favorite_list", favorite_list);
+  let favorite_game = localStorage.getItem("favorite_list");
+  let list_value;
+  if (Boolean(favorite_game)) {
+    list_value = favorite_game.split("|").map((item, i) => {
+      const itemArray = item.split(",");
+      return (
+        <li key={i} className="item">
+          <Link
+            to={`games/${itemArray[0]}/servers/${itemArray[1]}`}
+            children={itemArray[0] + " > " + itemArray[1]}
+          />
+        </li>
+      );
+    });
+  } else {
+    list_value = (
+      <li className="favorite_info">
+        아래 (+) 버튼을 사용하여 관심게임을 추가 해주세요.
+      </li>
+    );
+  }
   return (
     <div className="cont">
       <IconWrap tab={tab} />
-      <ul id="list">{"list_value"}</ul>
+      <ul id="favorite_list">{list_value}</ul>
+      <div id="add_list"></div>
     </div>
   );
 }
-function RankList({ list, tab }) {
-  const sort_list = [].concat(list).sort((a, b) => a.rank > b.rank ? 1 : -1)
+function RankList({ list, tab, setModal }) {
+  const sort_list = [].concat(list).sort((a, b) => (a.rank > b.rank ? 1 : -1));
   const list_value = sort_list.map((item, i) => {
     const { rank, name, rank_before } = item;
     let change = Number(rank_before) - Number(rank);
     let sign;
-    if(change > 0) {
+    if (change > 0) {
       sign = <ChangeUp />;
-    } else if(change < 0) {
+    } else if (change < 0) {
       sign = <ChangeDown />;
     } else {
       sign = <ChangeNone />;
     }
-    
+
     return (
-      <li key={i} className="item">
-        <div className="rank">{rank}</div>
-        <div className="name">{name}</div>
+      <li key={i} className="item" onClick={() => setModal(name)}>
+        <div className="rank" children={rank} />
+        <div className="name" children={name} />
         <div className="change">
           {sign}
           {change}
@@ -130,6 +159,30 @@ function RankList({ list, tab }) {
         </li>
         {list_value}
       </ul>
+    </div>
+  );
+}
+
+function RankModal({ modal, setModal }) {
+  return (
+    <div className="modal_wrap" onClick={() => setModal("")}>
+      <div className="modal">
+        <h4 className="modal_title">안내</h4>
+        <p className="modal_text">더 많은 시세 정보를 보시겠습니까?</p>
+        <div className="modal_btn_wrap">
+          <button
+            className="modal_btn modal_close"
+            onClick={() => setModal("")}
+            children="취소"
+          />
+          <Link
+            to={"http://m.itemmania.com/game_info/money/?gamename=" + modal}
+            className="modal_btn modal_confirm"
+            target="_blank"
+            children="확인"
+          />
+        </div>
+      </div>
     </div>
   );
 }
@@ -194,7 +247,9 @@ function IconWrap({ tab }) {
   return (
     <div className="icon_wrap">
       <div className="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M32 32C49.67 32 64 46.33 64 64V400C64 408.8 71.16 416 80 416H480C497.7 416 512 430.3 512 448C512 465.7 497.7 480 480 480H80C35.82 480 0 444.2 0 400V64C0 46.33 14.33 32 32 32zM160 224C177.7 224 192 238.3 192 256V320C192 337.7 177.7 352 160 352C142.3 352 128 337.7 128 320V256C128 238.3 142.3 224 160 224zM288 320C288 337.7 273.7 352 256 352C238.3 352 224 337.7 224 320V160C224 142.3 238.3 128 256 128C273.7 128 288 142.3 288 160V320zM352 192C369.7 192 384 206.3 384 224V320C384 337.7 369.7 352 352 352C334.3 352 320 337.7 320 320V224C320 206.3 334.3 192 352 192zM480 320C480 337.7 465.7 352 448 352C430.3 352 416 337.7 416 320V96C416 78.33 430.3 64 448 64C465.7 64 480 78.33 480 96V320z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M32 32C49.67 32 64 46.33 64 64V400C64 408.8 71.16 416 80 416H480C497.7 416 512 430.3 512 448C512 465.7 497.7 480 480 480H80C35.82 480 0 444.2 0 400V64C0 46.33 14.33 32 32 32zM160 224C177.7 224 192 238.3 192 256V320C192 337.7 177.7 352 160 352C142.3 352 128 337.7 128 320V256C128 238.3 142.3 224 160 224zM288 320C288 337.7 273.7 352 256 352C238.3 352 224 337.7 224 320V160C224 142.3 238.3 128 256 128C273.7 128 288 142.3 288 160V320zM352 192C369.7 192 384 206.3 384 224V320C384 337.7 369.7 352 352 352C334.3 352 320 337.7 320 320V224C320 206.3 334.3 192 352 192zM480 320C480 337.7 465.7 352 448 352C430.3 352 416 337.7 416 320V96C416 78.33 430.3 64 448 64C465.7 64 480 78.33 480 96V320z" />
+        </svg>
       </div>
       {subTitle}
     </div>

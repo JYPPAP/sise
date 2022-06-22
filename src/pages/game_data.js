@@ -226,3 +226,7 @@ let gamelist = [
 export function getGameList() {
   return gamelist;
 }
+
+export function getGame(name) {
+  return gamelist.find((game) => game.name === name);
+}

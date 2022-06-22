@@ -9,9 +9,10 @@ import PrivateInfo from "./pages/PrivateInfo";
 import Servers from "./pages/Servers";
 
 const App = () => {
+  // const [loading, setLoading] = useState(true);
   const [loading, setLoading] = useState(false);
-  // const [tab, setTab] = useState("home");
-  const [tab, setTab] = useState("rank");
+  const [tab, setTab] = useState("home");
+  // const [tab, setTab] = useState("favorite");
 
   setInterval(() => {
     setLoading(false);
@@ -23,12 +24,12 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HeaderTop />}>
-        <Route index element={<Main tab={tab} setTab={setTab}/>} />
+        <Route index element={<Main tab={tab} setTab={setTab} />} />
         <Route path="/games" element={<Games />}>
-          <Route path=":gameId" element={<Servers />} />
+          <Route path=":gameName" element={<Servers />} />
         </Route>
         <Route path="/settings" element={<Settings />}>
-          <Route path="/settings/privateinfo" element={<PrivateInfo />} />
+          <Route path=":privateInfo" element={<PrivateInfo />} />
         </Route>
       </Route>
     </Routes>

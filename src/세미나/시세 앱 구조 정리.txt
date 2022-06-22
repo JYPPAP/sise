@@ -1,0 +1,14 @@
+﻿페이지는 React-Router를 이용해서 연결한다.
+
+index : react-router-dom 을 이용해서 import 한 App을 BrowserRouter 로 감싸고 렌더링
+				- reset.css 와 index.css 를 가져온다.
+	App : react-router-dom 을 이용해서 페이지들을 연결한다.
+				- 로딩 페이지를 띄우기 위해 [loading, setLoading] State를 사용한다.
+				- Routes로 전체를 감싼다.
+				- 모든 페이지에서 보여지는 헤더인 HeaderTop 컴포넌트를 Routes 바로 아래에 위치한다.
+				- index 페이지로 출력할 Main 컴포넌트를 위치한다.
+				- 하위 주소 "/games" 와 연결할 컴포넌트 Games 또한 HeaderTop 컴포넌트 아래에 위치한다.
+					- 값으로 gamename을 가져가야 한다.
+					- 해당 gamename을 이용해서 해당 게임의 서버 목록을 출력해준다.
+				- 하위 주소 "/games" 에서 들어갈 Server 컴포넌트가 위치하기 때문에 
+	

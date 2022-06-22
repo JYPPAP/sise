@@ -1,5 +1,3 @@
-Banksalad
-뱅크샐러드 테크 스펙 템플릿 (Bottom Navigation Custom)
 작성자: 조영수
 조직: 플랫폼개발
 마지막 수정일: 2022-06-12
