@@ -172,3 +172,7 @@ let serverlist = [
 export function GetServerList() {
   return serverlist;
 }
+
+export function getServer(name) {
+  return serverlist.find((server) => server.server_name === name);
+}

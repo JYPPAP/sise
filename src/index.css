@@ -19,8 +19,14 @@ body {
     rgba(3, 206, 136, 1) 100%
   );
 }
-svg {
-  fill: #000;
+
+.page404{
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px);
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
 }
 
 #header_top svg {
@@ -47,6 +53,10 @@ svg {
 .star {
   width: 40px;
   height: 40px;
+}
+
+.star.on{
+  fill: #ff0;
 }
 
 #tab_indicate {
@@ -140,6 +150,13 @@ svg {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.item svg {
+  position: absolute;
+  width: 14px;
+  top: 0;
+  left: 15px;
 }
 
 #home_list .item {
@@ -280,13 +297,6 @@ svg {
   position: relative;
 }
 
-#rank_list .change svg {
-  position: absolute;
-  width: 14px;
-  top: 0;
-  left: 15px;
-}
-
 #game_list {
   display: flex;
   width: 100%;
@@ -338,13 +348,121 @@ svg {
   position: relative;
 }
 
-#game_list .change svg {
+#game_list .item svg {
+  position: absolute;
+  width: 14px;
+  top: 0;
+  left: 45px;
+}
+
+/* #game_list .change svg {
   position: absolute;
   width: 14px;
   top: 0;
   left: 15px;
+} */
+
+/* 서버 */
+.view_toggle{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  border: 2px solid #30a5ad;
+  overflow: hidden;
+}
+.view_table, .view_graph{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.view_toggle .on{
+  background-color:#30a5ad;
+  color: #fff;
+  font-weight: bold;
+}
+
+#server_table {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 154px);
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+#server_table::-webkit-scrollbar{
+  width: 8px;
+}
+#server_table::-webkit-scrollbar-thumb{
+  border-radius: 16px;
+}
+
+#server_table li{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #999;
+}
+
+#server_table .subtitle{
+  width: 100%;
+  height: 40px;
+}
+#server_table .date,
+#server_table .day_price,
+#server_table .change_price{
+  position: relative;
+  width: 33.3333%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+#server_table .subtitle .date::after,
+#server_table .subtitle .day_price::after{
+  content: '';
+  display: block;
+  height: 20px;
+  border-right: 1px solid #000;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+#server_table .date{
+  width: 33.3333%;
+}
+
+#server_table .change_price{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#server_table .ChangeUp{
+  top: 9px;
+}
+#server_table .ChangeDown{
+  top: 7px;
+}
+#server_table .ChangeNone{
+  top: 12px;
+}
+
+/* #server_table svg {
+  position: absolute;
+  width: 14px;
+  top: 0;
+  left: 15px;
+} */
+
+/* svg 아이콘 */
 .ChangeUp {
   fill: #f00;
 }
@@ -356,6 +474,7 @@ svg.ChangeDown {
   fill: #666;
 }
 
+/* 팝업창 */
 .modal_wrap {
   position: fixed;
   display: flex;

@@ -12,25 +12,32 @@ const App = () => {
   // const [loading, setLoading] = useState(true);
   const [loading, setLoading] = useState(false);
   const [tab, setTab] = useState("home");
-  // const [tab, setTab] = useState("favorite");
 
   setInterval(() => {
     setLoading(false);
-  },2000);
+  }, 2000);
 
-  if(loading) {
-    return <Loading />
+  if (loading) {
+    return <Loading />;
   }
+
   return (
     <Routes>
       <Route path="/" element={<HeaderTop />}>
         <Route index element={<Main tab={tab} setTab={setTab} />} />
-        <Route path="/games" element={<Games />}>
-          <Route path=":gameName" element={<Servers />} />
-        </Route>
-        <Route path="/settings" element={<Settings />}>
-          <Route path=":privateInfo" element={<PrivateInfo />} />
-        </Route>
+        <Route path="/games/:gameName" element={<Games />} />
+        <Route
+          path="/games/:gameName/servers/:serverName"
+          element={<Servers />}
+        />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/privateInfo" element={<PrivateInfo />} />
+        <Route
+          path="*"
+          element={
+            <div className="page404" children="There is Nothing Here!" />
+          }
+        />
       </Route>
     </Routes>
   );
