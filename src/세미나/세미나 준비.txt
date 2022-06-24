@@ -31,6 +31,34 @@ TDD를 활용한 React 시세 앱 개발
 		- 그러면 뒤로가기가 문제.
 	2. Router를 이용해서 링크를 잘 연동하려면 어떻게 해야할까?
 
+# 설치 과정 메모(RN)
+1. script를 다운로드 한다.
+https://microsoft.github.io/react-native-windows/docs/rnw-dependencies
+위 경로에서
+rnw-dependencies.ps1
+파일을 "다른 이름으로 저장" 하고 PowerShell을 관리자로 열고 해당 파일이 있는 위치에서
+Set-ExecutionPolicy Unrestricted -Scope Process -Force;
+iex (New-Object System.Net.WebClient).DownloadString('https://aka.ms/rnw-deps.ps1')
+를 붙여넣고 실행한다.
+* 초기 실행은 오래걸리며, 재부팅이 필요할 때도 있다.
+Android Studio 설치하고 AVD를 추가한다.
+Vitual 에서 추가하고, 
+다시 위 명령어를 실행했을 때 전부 OK가 뜬다면 환경설정이 1차로 완성된 것이다.
+	1. AVD를 활성화 해야한다.
+	 > 아이콘 클릭해서 다운로드 및 설치
+	2. JAVA_HOME 을 추가해줘야 한다.
+	3. 1, 2 완료 후 재부팅
+	4. 명령어 실행하니 정상동작.
+
+# 문제(RN 설치)
+1. 환경변수 문제 해결하기
+	> 파일을 찾을 때 Windows PowerShell에서gcm -All java명령을 사용하여 Java 위치 찾기 로 찾은다음
+	bin 앞까지의 경로를 환경변수 JAVA_HOME에 넣어주면 해결된다.
+2. RN 테스트 페이지 띄우기
+	> 환경변수 해결하니 잘 뜨네 ㅎ.
+	> 대신 경로에 한글이름 없어야 함.
+
+
 # 페이지
 	[메인] 4개
 		홈
@@ -155,8 +183,6 @@ TDD를 활용한 React 시세 앱 개발
 						- view, setView를 이용해서 표와 그래프 출력하는 부분 나누기
 						- 표
 							날짜
-
-	  
 
 [환경 설정]
 개발환경 : React-Native
