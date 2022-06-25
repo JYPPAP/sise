@@ -1,0 +1,38 @@
+작성자: 조영수
+조직: 플랫폼개발
+마지막 수정일: 2022-06-12
+프로덕트 스펙: 
+JIRA Epic: 
+
+요약 (Summary)
+시세 앱 공통으로 사용하는 헤더
+경로가 "/"일 때는 웹 앱 링크 | 로고 | 설정 링크 를 출력하고
+그 외의 경로일 때는 뒤로가기 | 타이틀 | 을 출력
+/games 일 때는 게임명, /setttings 일 때는 "설정", /addlist 일 때는 추가하기
+/privateinfo 일 때는 "개인정보 처리방침" 출력
+/games/servers(서버명) 일 때는{params 에서 serverName 이 있을 때} 서버명에 
+| 타이틀 | (별) 추가하기
+
+계획 (Plan)
+Link를 이용해 웹앱, 설정 등 페이지 링크 구현
+router의 BackButton 을 이용해 뒤로가기 구현
+주소가 "/" 일 때 메인페이지 용 헤더 출력
+그 외에는 params에 따라서 분기를 결정
+params에 serverName 이 있을 경우 (별) 추가해서 출력
+[star, setStar] : 별 on/off 상태 체크, setStar를 이용해 원하는 시점에서 리렌더링 하기
+localStorage에서 값 가져오는 것은 useEffect를 이용해 컴포넌트가 다운로드 완료된 이후 한 번만 실행할 수 있도록 하기
+
+function ToggleStar({ star, setStar, favorite, serverInfo })
+star, setStar : 별 on/off 조절 및 리렌더링에 사용
+favorite : getItem으로 가져온 관심 게임 목록
+serverInfo : 현재 사용자가 들어온 게임 > 서버 상태
+star의 상태에 따라서 로컬스토리지에서 추가 / 삭제하기
+추가 : 길이 체크 후 구분자인 "|" 를 이용해 내용 추가
+삭제 : 길이 확인 후 구분자를 포함한 값 삭제
+  > 함수를 최소화 할 수 있다면 합치기
+
+클릭했을 때, 게임명 > 서버명 의 값을 이용해 indexOf 로 검사하고 최종적인 값을 setItem을 이용해서 추가
+setStar를 이용해 star 값 변경....
+  > 이 부분은 변경할 수 있으면 변경하기
+    > 다른 방법... useEffect를 이용해서 해결할 수 있을 것 같음.
+    favorite가 변경되었을 때?

@@ -1,0 +1,97 @@
+작성자: 조영수
+조직: 플랫폼개발
+마지막 수정일: 2022-06-12
+프로덕트 스펙: 
+JIRA Epic: 
+
+# 요약 (Summary)
+로딩이 끝나고 보여지는 가장 첫 페이지이며, 주 컨텐츠가 출력되는 컴포넌트
+첫 화면은 홈 탭이 출력된다.
+
+[홈]
+서브 타이틀이 있고, games 로 이동하는 12개의 게임명을 출력한다.
+
+[게임검색]
+게임 목록 중 검색한 게임을 필터링해 보여준다.
+해당 게임 선택 시 games로 이동한다.
+
+[관심게임]
+사용자가 자주 보는 게임 > 서버를 저장하고 보여준다.
+클릭했을 때 바로 games/servers로 이동하고 해당 게임과 서버의 15일간 변동값을 보여주는 페이지로 이동한다.
+(+) 버튼을 클릭해 편집 및 추가할 수 있다.
+
+[거래순위]
+서브 타이틀에 오늘 날짜가 출력된다.
+순위와 게임명, 등락폭 아이콘과 변동값이 출력된다.
+게임을 클릭했을 때 웹앱으로 이동하는 모달창이 출력된다.
+
+
+# 계획 (Plan)
+Main 컴포넌트를 통해 불러와진다.
+
+[home]
+  games_data 값을 가져온다.
+  Link 태그를 이용해 게임을 선택했을 때 games에 params로 gameName을 넘겨준다.
+
+[search]
+  find, setFind State를 이용해서 검색창에 입력된 값이 변경될 때마다 해당하는 list를 출력한다.
+
+[favorite]
+  localStorage에 favorite_list에 값이 있는지 체크해서 있으면 게임 > 서버 링크를 출력하고, 없으면 추가 텍스트를 출력한다.
+
+[rank]
+  서브 타이틀로 오늘 날짜를 출력한다.
+  list 형태로 작성하며, 클릭했을 때 웹앱으로 연결하는 확인 창 형태의 모달창을 출력한다.
+
+const Container = ({tab}) => {
+  gamelist : 게임 목록 출력 시 사용
+  [find, setFind] : SearchList에서만 사용할 수 있는지 확인하기
+  [modal, setModal] : headerTop의 로고 옆 링크를 클릭했을 때, rank에서 게임을 선택했을 때 띄울 모달창 토글용
+  [search, setSearch] : 지워도 될 것 같음.
+    > 안쓰는거 남은 거 같은데...
+    > 상단의 useSearchParams 도 지우기
+    return (
+      #container
+      modal ? on : off
+      list 출력
+    )
+}
+
+function HomeList ({ list })
+  map을 이용해 목록 생성
+  서브 타이틀은 컴포넌트화 후 재사용 ( 텍스트는 props를 이용해 전달하기 )
+
+function SearchList ({ find, setFind, list })
+  list에 filter를 추가해 검색어가 목록에 있는 것만 배열로 따로 저장
+  필터링 된 배열을 map을 이용해 배치
+  > 공통적으로 사용하는 list를 map을 이용해 만드는 부분은 함수화 해서 사용하기
+    function item({ link, text })
+      <View key={i} className="item">
+        <Link to={link} children={text} />
+      </View>
+
+function FavoriteList()
+  [listEdit, setListEdit] : true 시 편집모드 활성화
+  로컬스토리지에서 값 가져와 배열로 변환 후 출력
+  값이 없다면 알림 텍스트 출력
+  (+) 버튼 클릭 시 버튼 표시
+    편집버튼 클릭 시 item 앞에 아이콘 표시
+    추가버튼 클릭 시 추가 페이지로 이동
+      > /addlist로 이동하고, 게임목록 출력 > 해당 게임의 서버목록 출력
+        > 서버 선택 시 해당 서버 관심게임에 등록(로컬스토리지)
+
+function RankList({ list, setModal })
+[modal, setModal] : 모달창 출력 용
+  rank로 정렬해서 값 출력(item 함수 사용 X)
+  item 생성할 때 rankModal함수를 item클래스 에 추가
+  오늘 날짜는 getToday 함수를 이용해 가져오기
+
+function rankModal({modal, setModal})
+  안내 형식의 modal 창 작성, setModal("")일 때 모달창 닫기
+  modal의 값은 클릭한 요소의 게임 명
+  해당 게임명을 이용해 Link의 경로로 사용해 사용자가 "확인" 선택 시 웹엡 페이지 출력
+  취소 선택 시 setModal("")로 모달창 닫기
+
+function IconWrap({ text })
+  icon과 text를 출력
+

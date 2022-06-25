@@ -1,71 +1,16 @@
-ÀÛ¼ºÀÚ: Á¶¿µ¼ö
-Á¶Á÷: ÇÃ·§Æû°³¹ß
-¸¶Áö¸· ¼öÁ¤ÀÏ: 2022-06-12
-ÇÁ·Î´öÆ® ½ºÆå: 
+ìž‘ì„±ìž: ì¡°ì˜ìˆ˜
+ì¡°ì§: í”Œëž«í¼ê°œë°œ
+ë§ˆì§€ë§‰ ìˆ˜ì •ì¼: 2022-06-12
+í”„ë¡œë•íŠ¸ ìŠ¤íŽ™: 
 JIRA Epic: 
 
-# ¿ä¾à (Summary)
-¼­¹ö ÆäÀÌÁö´Â °ÔÀÓ¸ñ·Ï ÆäÀÌÁö¿¡¼­ ¼­¹öÀ» ¼±ÅÃÇßÀ» ¶§ ÇØ´ç °ÔÀÓ ¼­¹öÀÇ 15ÀÏµ¿¾ÈÀÇ µî¶ô Æø, Æò±Õ°¡¸¦ Ãâ·ÂÇØÁØ´Ù.
+ìš”ì•½ (Summary)
+ì„ íƒí•œ ì„œë²„ ì´ë¦„ê³¼ ê¸°ì¤€ì„ ì¶œë ¥í•œë‹¤.
+15ì¼ ê°„ì˜ í‰ê·  ê¸ˆì•¡, ë“±ë½í­ì„ ì¶œë ¥í•œë‹¤.
+í‘œ ë³´ê¸°, ê·¸ëž˜í”„ ë³´ê¸°ë¥¼ ì´ìš©í•´ ì‚¬ìš©ìžì—ê²Œ ë‹¤ì–‘í•œ ê°’ì„ ì¶œë ¥í•´ì„œ ë³´ì—¬ì¤€ë‹¤.
+í—¤ë”ì˜ ë³„ì„ í´ë¦­í•´ ê´€ì‹¬ê²Œìž„ì— ë“±ë¡í•œë‹¤.
 
-
-# ¸ñÇ¥ (Goals)
-header_top ÄÄÆ÷³ÍÆ®¿¡¼­ Title ºÎºÐÀÌ ¼­¹ö¸íÀ¸·Î Ãâ·ÂµÇ¾î¾ß ÇÑ´Ù.
-/games/:gameName/server/:serverNameÀÏ ¶§¸¸ ¿ìÃø¿¡ º°ÀÌ Ãâ·ÂµÇ¾î¾ß ÇÑ´Ù.
-ÇØ´ç º°À» Å¬¸¯ÇÏ¸é localStorage ¿¡ °ÔÀÓ, ¼­¹öÀÇ °ªÀ» ÀúÀåÇÑ´Ù.
-
-# °èÈ¹ (Plan)
-header_top ÄÄÆ÷³ÍÆ®¸¦ ºÒ·¯¿Â´Ù.
-
-
-
-[header_tab]
-header_tab¿¡¼­ "È¨" ÅÇÀº º¼µåÃ³¸® µÇ¾îÀÖ°í, ÇÏ´Ü¿¡ tab_bar´Â home¸¦ °­Á¶ÇÑ »óÅÂ·Î µÇ¾îÀÖ´Ù.
-
-´Ù¸¥ ÆäÀÌÁö¿¡¼­ "È¨"ÅÇÀ» ´­·¶À» ¶§ È¨À¸·Î °¡±â À§ÇØ¼­´Â State³ª Props¸¦ ¾îµð¿¡ ÀúÀåÇÏ°í ¾îµð·Î ¿Å°Ü¾ß ÇÒ±î?
-header_tab¿¡ Å¬¸¯ÀÌº¥Æ®°¡ ¹ß»ýÇÏ¸é tab °ú setTabÀ» ÁØºñÇØ¼­ ÇöÀç tab °ª°ú Å¬¸¯ÇÑ ¿ä¼Ò°¡ °¡Áö°í ÀÖ´Â tab°ªÀ» ºñ±³ÇØ¼­ °°´Ù¸é ¾Æ¹« µ¿ÀÛÀ» ÇÏÁö ¾Ê°í, ´Ù¸£´Ù¸é setTab °ªÀ» º¯°æ ÈÄ »õ·Î ·»´õ¸µ ÇÑ´Ù.
-{ tab, setTab } °´Ã¼´Â Root¿¡¼­ °ü¸®ÇÑ´Ù.
-Root¿¡¼­ °ü¸®ÇÏ´Â ÀÌÀ¯´Â ÇÏÀ§ ¸ñ·ÏÀÎ header_tab °ú container¸¦ °°ÀÌ º¯°æÇØÁà¾ß ÇÏ±â ¶§¹®ÀÌ´Ù.
-Root¿¡ ÀúÀåÇØÁà¾ß ³ªÁß¿¡ µÚ·Î°¡±â¸¦ ÇßÀ» ¶§ ÀÌÀü ÅÇÀ¸·Î ¿øÈ°ÇÏ°Ô µ¹¾Æ°¥ ¼ö ÀÖ´Ù.
-tab_bar¿¡ transitionÀ» Ãß°¡Çß±â ¶§¹®¿¡ tab_bar¿¡ Å¬·¡½º¸¦ Ãß°¡ÇÏ´Â ¹æ½ÄÀ» ÀÌ¿ëÇØ ¾Ö´Ï¸ÞÀÌ¼ÇÀ» µ¿ÀÛ½ÃÄÑ¾ß ÇÑ´Ù.
-
-[container]
-containerÀÇ subtitleÀº ¾ÆÀÌÄÜ°ú "´ëÇ¥ °ÔÀÓ" ÅØ½ºÆ®°¡ Ãâ·ÂµÈ´Ù.
-±× ¾Æ·¡·Î list ¿Í itemÀÌ Ãâ·ÂµÈ´Ù.
-itemÀ» Å¬¸¯ÇÏ¸é ÇØ´ç °ÔÀÓÀÇ ¼­¹ö ¸ñ·Ï Ã¢À¸·Î ÀÌµ¿ÇÑ´Ù.
-	- ¼­¹ö ¸ñ·ÏÀ¸·Î´Â ¾î¶»°Ô ÀÌµ¿½ÃÅ°Áö?
-		- data-game¿¡ DB¿¡¼­ °¡Á®¿Â °ª ¶Ç´Â textContent¸¦ ÀÐ¾î¼­ °Ë»öÇÑ µÚ ³Ö¾îÁÖ¸é µÉ °Í °°Àºµ¥
-ÃÖÇÏ´Ü¿¡´Â ¹è³Ê°¡ Ãâ·ÂµÈ´Ù.
-
-container´Â p10
-ÇöÀç tab StateÀÇ °ªÀÌ home ÀÏ ¶§ container¿¡ home ÅÇÀÌ Ãâ·ÂµÇµµ·Ï ¸¸µç´Ù.
-subtitledÀÇ ÅØ½ºÆ®´Â tab °ª¿¡ µû¶ó¼­ ´Ù¸¥ °ªÀÌ Ãâ·ÂµÉ ¼ö ÀÖµµ·Ï ¸¸µç´Ù. mb10
-
-ul.home_list>(li.home_item)*12ÀÇ ÇüÅÂ·Î ¸¸µç´Ù.
-home_item¿¡ nth-child(2n)¸¶´Ù mr Á¦°Å, mb´Â mr°ú µ¿ÀÏÇÑ °ªÀ» °è»êÇØ Ãß°¡ÇÑ´Ù.
-poa·Î ÃÖÇÏ´Ü¿¡ ¹è³Ê°¡ µé¾î°¥ ÀÚ¸®¸¦ ½½¶óÀÌµå ÇüÅÂ·Î ÀÛ¼ºÇÑ´Ù.
-	ÇØ´ç ½½¶óÀÌµå´Â ÄÄÆ÷³ÍÆ®È­ ÇÑ´Ù.
-
-
-Å×Å© ¹®¼­¿¡¼­ °¡Àå ±ä ÆÄÆ®ÀÔ´Ï´Ù. ´ç½ÅÀÌ ÁØºñÇÑ ¸ðµç ¸®¼­Ä¡, ÁØºñ ³»¿ëµéÀ» ¾¹´Ï´Ù. ¿©±â¿¡ ¾î¶»°Ô ±â¼úÀû, ¿£Áö´Ï¾î¸µÀûÀ¸·Î Á¢±ÙÇÒÁö »ó¼¼È÷ ¹¦»çÇÏ¼¼¿ä. ¸¸¾à ¾î¶² ºÎºÐÀ» ¾î¶»°Ô ÇÒÁö È®½ÇÈ÷ °áÁ¤ÇÏÁö ¸øÇÑ »óÅÂ¶ó¸é, ¾î¶² °ÍµéÀ» °í·ÁÇÏ°í ÀÖ´ÂÁö ´Ù ¸ñ·ÏÈ­ÇØ¼­ ÀûÀ¸¼¼¿ä. ±×·¯¸é ÀÌ ¹®¼­ ¸®ºä¾îµéÀÌ ´ç½ÅÀÇ ¿Ã¹Ù¸¥ °áÁ¤¿¡ µµ¿òÀ» ÁÖ°Ô µË´Ï´Ù. ¾ó¸¶³ª ±â¼úÀûÀ¸·Î ±í°Ô ½á¾ß ÇÏ´ÂÁö´Â ÀÌ Å×Å© ½ºÆåÀÇ ¸ñÀû°ú µ¶ÀÚµé¿¡ µû¶ó Á¤ÇÕ´Ï´Ù. »ý»êÀûÀÎ Á¦¾ÈÀ» ¹ÞÀ» ¼ö ÀÖµµ·Ï ÃæºÐÈ÷ »ó¼¼ÇÏ°Ô ÀûÀ¸¼¼¿ä.
-¿©±â´Â ¾î¶»°Ô ÇÁ·ÎÁ§Æ®°¡ ´Ù¸¥ ½Ã½ºÅÛµé°ú »óÈ£ÀÛ¿ëÇÏ´ÂÁö ±×¸²ÀÌ³ª ´ÙÀÌ¾î±×·¥À» Æ÷ÇÔÇÏ±â ÁÁÀº ÁöÁ¡ÀÔ´Ï´Ù. »ç¿ëÀÚ¿Í ½Ã½ºÅÛ °£ÀÇ ½ÃÄö½º ´ÙÀÌ¾î±×·¥, ¼­ºñ½º¿Í API °£ÀÇ µ¥ÀÌÅÍ Èå¸§ ´ÙÀÌ¾î±×·¥, µ¥ÀÌÅÍº£ÀÌ½º ERD µî ´Ù ÁÁ½À´Ï´Ù. 
-ÀÌ Å×Å© ½ºÆåÀÌ ·Î¿ì ·¹º§±îÁö ´Ù·ï¾ß ÇÑ´Ù¸é HTTP ÀÀ´ä ÄÚµå, JSON ¿äÃ» / ÀÀ´ä Æ÷¸Ë, ¿¡·¯ ¸í¼¼ µî±îÁö ¸ðµÎ ´Ù·ïÁ®¾ß ÇÕ´Ï´Ù.
-º¸¾È, °³ÀÎÁ¤º¸, ¸®½ºÅ© (Security, Privacy, Risks)
-ÀÌ ÇÁ·ÎÁ§Æ®°¡ ¿ÜºÎ·Î °ø°³µÇ´Â ¼­ºñ½º¶ó¸é, ¾î¶² º¸¾È À§ÇèÀÌ ÀÖÀ»Áö ¸®½ºÆ®È­ÇÏ¼¼¿ä. ÇÁ·ÎÁ§Æ® ¸®½ºÅ©¸¦ µûÁ® º¸¸é ¸®ºä¾î°¡ ÀÌ ¼­ºñ½º, Á¦Ç°À» ºñÆÇÇÏ´õ¶óµµ ½ºÆ®·¹½º¸¦ ´ú ¹Þ½À´Ï´Ù. :) ÀÌ·± ºÎÁ¤ÀûÀÎ Ãø¸éµµ Á¶¸íÇØ ¸®ºä¾îµéÀÌ ´äÀ» Á¦¾ÈÇÏµµ·Ï ÇÏ¸é °á°úÀûÀ¸·Î ±× ±â´ÉÀº ´õ¿í ¾ÈÁ¤ÀûÀÌ°Ô µË´Ï´Ù. 
-ÀÌ¿Ü °í·Á»çÇ×µé (Other Considerations)
-°í·ÁÇß¾úÀ¸³ª ÇÏÁö ¾Ê±â·Î °áÁ¤µÈ »çÇ×µéÀ» Àû½À´Ï´Ù. ÀÌ·¸°Ô ÇÔÀ¸·Î½á ÀÌÀü¿¡ ³íÀÇ µÇ¾ú´ø ÁÖÁ¦°¡ ´Ù½Ã ³ª¿ÀÁö ¾Êµµ·Ï ÇÒ ¼ö ÀÖ°í, ÀÌ¹Ì ³íÀÇµÇ¾ú´ø ³»¿ëÀÌ´õ¶óµµ ¸®ºä¾îµéÀÌ ´Ù½Ã »ìÆìº¼ ¼ö ÀÖµµ·Ï ÇÕ´Ï´Ù.
-¿¹) ¾Û µ¥ÀÌÅÍ ÃÊ±âÈ­ ½Ã¿¡´Â »ç¿ëÀÚ°¡ Ä¿½ºÅÒÇß´ø ¸®½ºÆ®¸¦ ¸ðµÎ ³¯¸®±â·Î Çß¾úÀ¸³ª, ±âÁ¸ ·ÎÁ÷¿¡¼­ ¾Û µ¥ÀÌÅÍ ÃÊ±âÈ­ ½Ã¿¡ ·ÎÄÃ °ü·Ã Ãß°¡ ÇÚµé¸µÀÌ ¾ø¾î ÀÌ ±â´É¿¡¼­µµ ¾Û µ¥ÀÌÅÍ ÃÊ±âÈ­ ¶§¿¡ ¸®½ºÆ®¸¦ ³¯¸®´Â µî Ãß°¡ÀûÀÎ ±â´É ±¸ÇöÀ» ÇÏÁö ¾Ê±â·Î ÇÔ.
-¸¶ÀÏ½ºÅæ (Milestones)
-ÇÁ·ÎÁ§Æ®¸¦ Á¦ ½Ã°£¿¡ ¸ÂÃß±â À§ÇØ ´ë·«ÀûÀÎ ¸¶ÀÏ½ºÅæÀ» °øÀ¯ÇÏ¼¼¿ä.
-¿¹)
-1. ~ 9/25: BPL ÄÄÆ÷³ÍÆ® °³¹ß
-2. 9/28 ~ 9/29: ½ÇÇè º¯¼ö Ãß°¡, ·ÎÄÃ º¯¼ö Ãß°¡
-3. 9/30 ~ 10/4: Ãß¼® ¿¬ÈÞ!
-4. 10/5: ÇÏ´Ü ÅÇ È®Àå °¡´ÉÇÑ ±¸Á¶·Î ¸®ÆÑÅä¸µ
-5. 10/6 ~ 10/8: ºñÁî´Ï½º ·ÎÁ÷ ±¸Çö
-6. 10/12 ~ 10/20: »ç¿ëÀÚ ÀÌº¥Æ® ºÎÂø ¹× ¹ÌÁøÇÑ ³»¿ë º¸Ãæ
-7. 10/20: 2.45.0 ÄÚµå ÇÁ¸®Áî (ÀÌ¶§±îÁö ³»ºÎ ±â´É Å×½ºÆ®, ÀÌº¥Æ® ·Î±ë Å×½ºÆ®)
-8. 10/21 ~ 10/23: 2.45.0 ¸±¸®Áî QA
-9. 11/4: 2.45.0 Rollout
-Áú¹®µé (Open Questions)
-¹¯°í ½ÍÀº ¼³°è, ±¸Çö Áú¹®µéÀ» ÀûÀ¸¼¼¿ä. ÇÇµå¹éÀ» ¹Þ°í ½ÍÀº Áú¹®µéµµ ÀûÀ¸¼¼¿ä. °¡Ä¡ ÀÖ´Â ÀÇ°ßÀ» ÁÙ ¼ö ÀÖ´Â Æ¯Á¤ ÆÀÀÌ³ª »ç¶÷¿¡°Ô ¸®ºä¸¦ ¿äÃ»ÇÏ´Â°É ºÎ´ã½º·´°Ô »ý°¢ÇÏÁö ¸¶¼¼¿ä. 
-¿¹) ÇÏ´Ü ÅÇÀ» Å¬¸¯ÇÒ ¶§¸¶´Ù ÇØ´ç ÅÇÀÇ ¼ø¼­¸¦ ÀÌº¥Æ®·Î ±â·ÏÇÏ°íÀÚ ÇÏ´Âµ¥¿ä. µ¥ÀÌÅÍ ºÐ¼® ÆÀ¿¡¼­ ÀÌ·¸°Ô ÇØµµ È¿°ú¸¦ ±Ø´ëÈ­ ÇÒ ¼ö ÀÖÀ»Áö ÄÁÆßÇØ ÁÖ½Ç ¼ö ÀÖ³ª¿ä?
+ê³„íš (Plan)
+paramsë¥¼ ì´ìš©í•´ gameName ê³¼ serverNameì„ ê°€ì ¸ì˜¨ë‹¤.
+viewTable, setViewTableì„ ì´ìš©í•´ "í‘œ ë³´ê¸°"ì™€ "ê·¸ëž˜í”„ ë³´ê¸°"ë¥¼ ë‚˜ëˆˆë‹¤.
+serverlistì˜ ê°’ì„ ì¶œë ¥í•œë‹¤.

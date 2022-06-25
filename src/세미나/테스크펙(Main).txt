@@ -1,0 +1,36 @@
+작성자: 조영수
+조직: 플랫폼개발
+마지막 수정일: 2022-06-12
+프로덕트 스펙: 
+JIRA Epic: 
+
+# 요약 (Summary)
+로딩이 끝나고 보여지는 가장 첫 페이지 이다.
+최상단에서 HeaderTop을 이용해 헤더를 출력한다.
+Main에서 HeaderTab과 하위 내용으로 Container를 가져온다.
+
+HeaderTab에서는 현재 선택된 페이지인 "홈" 탭이 출력되고, HeaderTab에서 사용자가 탭을 선택했을 때 State를 변경해 Container를 바꿔서 띄워준다.
+Container 내부의 내용을 선택했을 때 games 또는 games/servers로 이동할 수 있도록 한다.
+
+# 계획 (Plan)
+HeaderTop과 Main 컴포넌트를 불러온다.
+
+Main 에서는 App에서 tab, setTab State를 받아온다.
+Main 에서는 HeaderTab을 출력하고 Container를 가져온다.
+
+[HeaderTab]
+  [동작]
+    초기값은 home로 되어있고 tab에 클릭 이벤트가 발생하면 setTab의 값을 변경해 리렌더링을 한다.
+	tab_indicate에 tab값을 클래스로 추가해 해당 클래스일 때 Style이 변경될 수 있도록 한다.
+	tab을 감싸는 요소에 tab값을 클래스로 추가해 선택된 탭에 스타일이 변경될 수 있도록 한다.
+  [스타일]
+	일반적인 탭바의 형태로 만들고, tab_indicate에 transition을 추가해 애니메이션을 추가한다.
+	tab을 감싸는 요소에 tab을 클래스로 추가해 스타일을 변경한다.
+  [구조]
+  Main.js 내부에서는 HeaderTab 함수를 생성 및 사용하고, 하위의 값 출력하는 부분은 Container를 import 한다.
+  
+  HeaderTab 함수 선언
+  <>
+    <HeaderTab tab={tab} setTab={setTab} />
+    <Container tab={tab} />
+  </>

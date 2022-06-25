@@ -1,152 +1,152 @@
-# React ÇÐ½ÀÇÏ±â
+# React í•™ìŠµí•˜ê¸°
 
-React¶õ ¹«¾ùÀÎ°¡?
-JavascriptÀÇ ¼ö¸¹Àº ¹®¹ýÀ» ÆíÇÏ°Ô, È¿À²ÀûÀ¸·Î »ç¿ëÇÏ±â À§ÇØ µµ¿òÀ» ÁÖ´Â ¶óÀÌºê·¯¸®?
+Reactëž€ ë¬´ì—‡ì¸ê°€?
+Javascriptì˜ ìˆ˜ë§Žì€ ë¬¸ë²•ì„ íŽ¸í•˜ê²Œ, íš¨ìœ¨ì ìœ¼ë¡œ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ë„ì›€ì„ ì£¼ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬?
 
-¶óÀÌºê·¯¸®¿Í ÇÁ·¹ÀÓ¿öÅ©ÀÇ Â÷ÀÌÁ¡Àº?
-# ¶óÀÌºê·¯¸®´Â ÇÊ¿äÇÑ ºÎºÐ¸¸À» ´Üµ¶À¸·Î °¡Á®¿Í¼­ »ç¿ëÇÒ ¼ö ÀÖ´Ù.(°¡º­¿ò)
-# ÇÁ·¹ÀÓ¿öÅ©´Â ¸ðµç ¾ÖÇÃ¸®ÄÉÀÌ¼ÇÀÇ °øÅëÀûÀÎ ºÎºÐÀ» Á¦°ø
-ÇÊ¿äÇÑ ±â´ÉÀÌ ÀÌ¹Ì ¸¸µé¾îÁ® ÀÖ¾î ¸¸µé¾îÁø 'Æ²' ¾È¿¡ '³»¿ë¹°'À» Ã¤¿ö³Ö´Â Çü½Ä
+ë¼ì´ë¸ŒëŸ¬ë¦¬ì™€ í”„ë ˆìž„ì›Œí¬ì˜ ì°¨ì´ì ì€?
+# ë¼ì´ë¸ŒëŸ¬ë¦¬ëŠ” í•„ìš”í•œ ë¶€ë¶„ë§Œì„ ë‹¨ë…ìœ¼ë¡œ ê°€ì ¸ì™€ì„œ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.(ê°€ë²¼ì›€)
+# í”„ë ˆìž„ì›Œí¬ëŠ” ëª¨ë“  ì• í”Œë¦¬ì¼€ì´ì…˜ì˜ ê³µí†µì ì¸ ë¶€ë¶„ì„ ì œê³µ
+í•„ìš”í•œ ê¸°ëŠ¥ì´ ì´ë¯¸ ë§Œë“¤ì–´ì ¸ ìžˆì–´ ë§Œë“¤ì–´ì§„ 'í‹€' ì•ˆì— 'ë‚´ìš©ë¬¼'ì„ ì±„ì›Œë„£ëŠ” í˜•ì‹
 
-React Native´Â ¸ð¹ÙÀÏ ³×ÀÌÆ¼ºê ¾ÛÀ» React·Î ¸¸µé ¼ö ÀÖ°Ô ÇØÁÖ´Â ÇÁ·¹ÀÓ¿öÅ©
+React NativeëŠ” ëª¨ë°”ì¼ ë„¤ì´í‹°ë¸Œ ì•±ì„ Reactë¡œ ë§Œë“¤ ìˆ˜ ìžˆê²Œ í•´ì£¼ëŠ” í”„ë ˆìž„ì›Œí¬
 
-React.JSÀÇ ÇÙ½É : Virtual DOM
-- React.JSÀÇ ÇÙ½ÉÀº °¡»ó DOM
-- ½ÇÁ¦ DOMÀ» Á÷Á¢ Ã³¸®ÇÏ´Â ÇàÀ§´Â Ã³¸®ÇØ¾ßÇÏ´Â µ¥ÀÌÅÍ°¡ ¸¹¾ÆÁú °æ¿ì ºñÈ¿À²Àû.
-  ¼º´Éµµ ´À¸®°í °ü¸®°¡ Èûµé´Ù. -> ±×·±°¡?
-- ÀÚ¹Ù½ºÅ©¸³Æ® °´Ã¼¿¡ ºÒ°úÇÑ Virtual DOMÀ» »ç¿ëÇÒ °æ¿ì DOM API¸¦ »ç¿ëÇÏ´Â °Íº¸´Ù Ã³¸®°¡ ÈÎ¾À »¡¶óÁø´Ù.
+React.JSì˜ í•µì‹¬ : Virtual DOM
+- React.JSì˜ í•µì‹¬ì€ ê°€ìƒ DOM
+- ì‹¤ì œ DOMì„ ì§ì ‘ ì²˜ë¦¬í•˜ëŠ” í–‰ìœ„ëŠ” ì²˜ë¦¬í•´ì•¼í•˜ëŠ” ë°ì´í„°ê°€ ë§Žì•„ì§ˆ ê²½ìš° ë¹„íš¨ìœ¨ì .
+  ì„±ëŠ¥ë„ ëŠë¦¬ê³  ê´€ë¦¬ê°€ íž˜ë“¤ë‹¤. -> ê·¸ëŸ°ê°€?
+- ìžë°”ìŠ¤í¬ë¦½íŠ¸ ê°ì²´ì— ë¶ˆê³¼í•œ Virtual DOMì„ ì‚¬ìš©í•  ê²½ìš° DOM APIë¥¼ ì‚¬ìš©í•˜ëŠ” ê²ƒë³´ë‹¤ ì²˜ë¦¬ê°€ í›¨ì”¬ ë¹¨ë¼ì§„ë‹¤.
 
-React.JSÀÇ ÀåÁ¡
-- ÇÐ½ÀÀÌ °£´ÜÇÏ´Ù. ÄÄÆ÷³ÍÆ®¸¸ »ç¿ëÇÏ±â ¶§¹®¿¡ º¹ÀâÇÏÁö ¾Ê´Ù.
-  > ±×·±°¡? ¾î·Æ´øµ¥..
-  > ÀÚ½À¼­ ÀÌÇØÇÏ±â ¾î·Æ´øµ¥?
-- °¡»ó DOMÀ» »ç¿ëÇÑ´Ù.
-- Garbage Collection, ¸Þ¸ð¸®°ü¸®, ¼º´É
-- UI¸¦ ÄÄÆ÷³ÍÆ®È­ ÇÏ¿© ¸Å¿ì °£ÆíÇÑ UI ¼öÁ¤ ¹× Àç»ç¿ë
-- ÆäÀÌ½ººÏ °³¹ßÀÚµéÀÌ ¸¸µé¾î ÆäÀÌ½ººÏ¿¡¼­ ²ÙÁØÈ÷ ¾÷µ¥ÀÌÆ®¸¦ ÇÔ (ÅºÅºÇÑ ±â¹Ý)
-- ´Ù¸¥ ÇÁ·¹ÀÓ¿öÅ©³ª ¶óÀÌºê·¯¸®¿Í È¥¿ë °¡´É. (ÀÌ¹Ì ¿Ï·áµÈ ¼­ºñ½º¿¡µµ Àû¿ë °¡´É)
-- *¼­¹ö & Å¬¶óÀÌ¾ðÆ® »çÀÌµå ·»´õ¸µ ¸ðµÎ Áö¿ø
+React.JSì˜ ìž¥ì 
+- í•™ìŠµì´ ê°„ë‹¨í•˜ë‹¤. ì»´í¬ë„ŒíŠ¸ë§Œ ì‚¬ìš©í•˜ê¸° ë•Œë¬¸ì— ë³µìž¡í•˜ì§€ ì•Šë‹¤.
+  > ê·¸ëŸ°ê°€? ì–´ë µë˜ë°..
+  > ìžìŠµì„œ ì´í•´í•˜ê¸° ì–´ë µë˜ë°?
+- ê°€ìƒ DOMì„ ì‚¬ìš©í•œë‹¤.
+- Garbage Collection, ë©”ëª¨ë¦¬ê´€ë¦¬, ì„±ëŠ¥
+- UIë¥¼ ì»´í¬ë„ŒíŠ¸í™” í•˜ì—¬ ë§¤ìš° ê°„íŽ¸í•œ UI ìˆ˜ì • ë° ìž¬ì‚¬ìš©
+- íŽ˜ì´ìŠ¤ë¶ ê°œë°œìžë“¤ì´ ë§Œë“¤ì–´ íŽ˜ì´ìŠ¤ë¶ì—ì„œ ê¾¸ì¤€ížˆ ì—…ë°ì´íŠ¸ë¥¼ í•¨ (íƒ„íƒ„í•œ ê¸°ë°˜)
+- ë‹¤ë¥¸ í”„ë ˆìž„ì›Œí¬ë‚˜ ë¼ì´ë¸ŒëŸ¬ë¦¬ì™€ í˜¼ìš© ê°€ëŠ¥. (ì´ë¯¸ ì™„ë£Œëœ ì„œë¹„ìŠ¤ì—ë„ ì ìš© ê°€ëŠ¥)
+- *ì„œë²„ & í´ë¼ì´ì–¸íŠ¸ ì‚¬ì´ë“œ ë Œë”ë§ ëª¨ë‘ ì§€ì›
 
-* ¼­¹ö »çÀÌµå ·»´õ¸µ(SSR)ÀÇ ÀåÁ¡
-ÃÊ±â ·»´õ¸µÀ» ¼­¹ö »çÀÌµå ·»´õ¸µÀ¸·Î ÇÒ °æ¿ì, À¯Àú¿¡°Ô ÄèÀûÇÑ »ç¿ë°æÇèÀ» Á¦°øÇÒ ¼ö ÀÖ´Ù.
-Å¬¶óÀÌ¾ðÆ® »çÀÌµå ·»´õ¸µÀº ÃÊ±â ±¸µ¿ µô·¹ÀÌ°¡ ÀÖ´Ù.
-¼­¹ö Ãø¿¡¼­ HTMLÀ» ¹Ì¸® »ý¼ºÇØ¼­ ¹®ÀÚ¿­ ÇüÅÂ·Î ºê¶ó¿ìÀú¿¡ ¶ç¿ò.
-SEO Áö¿ø °¡´É.
-´Ù¸¸ ¼­¹öÃøÀÇ ÀÚ¿øÀ» ¾²°Ô µÇ´Â °ÍÀº ºÒ°¡ÇÇÇÏ±â ¶§¹®¿¡ ÄÄÇ»ÅÍ ¼º´ÉÀÌ ÁÁÁö¾Ê°í ¹æ¹®ÀÚ°¡ ¸¹´Ù¸é ÃßÃµÇÏÁö ¾ÊÀ½
+* ì„œë²„ ì‚¬ì´ë“œ ë Œë”ë§(SSR)ì˜ ìž¥ì 
+ì´ˆê¸° ë Œë”ë§ì„ ì„œë²„ ì‚¬ì´ë“œ ë Œë”ë§ìœ¼ë¡œ í•  ê²½ìš°, ìœ ì €ì—ê²Œ ì¾Œì í•œ ì‚¬ìš©ê²½í—˜ì„ ì œê³µí•  ìˆ˜ ìžˆë‹¤.
+í´ë¼ì´ì–¸íŠ¸ ì‚¬ì´ë“œ ë Œë”ë§ì€ ì´ˆê¸° êµ¬ë™ ë”œë ˆì´ê°€ ìžˆë‹¤.
+ì„œë²„ ì¸¡ì—ì„œ HTMLì„ ë¯¸ë¦¬ ìƒì„±í•´ì„œ ë¬¸ìžì—´ í˜•íƒœë¡œ ë¸Œë¼ìš°ì €ì— ë„ì›€.
+SEO ì§€ì› ê°€ëŠ¥.
+ë‹¤ë§Œ ì„œë²„ì¸¡ì˜ ìžì›ì„ ì“°ê²Œ ë˜ëŠ” ê²ƒì€ ë¶ˆê°€í”¼í•˜ê¸° ë•Œë¬¸ì— ì»´í“¨í„° ì„±ëŠ¥ì´ ì¢‹ì§€ì•Šê³  ë°©ë¬¸ìžê°€ ë§Žë‹¤ë©´ ì¶”ì²œí•˜ì§€ ì•ŠìŒ
 
-React.JSÀÇ ´ÜÁ¡
-- ½Ã°¢ÀûÀ¸·Î º¸¿©Áö´Â ºÎºÐ¸¸ ÄÁÆ®·Ñ ÇÒ ¼ö ÀÖ´Ù.
-- IE8 ÀÌÇÏ´Â Áö¿øÇÏÁö ¾Ê´Â´Ù.
+React.JSì˜ ë‹¨ì 
+- ì‹œê°ì ìœ¼ë¡œ ë³´ì—¬ì§€ëŠ” ë¶€ë¶„ë§Œ ì»¨íŠ¸ë¡¤ í•  ìˆ˜ ìžˆë‹¤.
+- IE8 ì´í•˜ëŠ” ì§€ì›í•˜ì§€ ì•ŠëŠ”ë‹¤.
 
-# React.JS ½ÃÀÛÇÏ±â
-- React ÆÄÀÏÀº ÄÄÆ÷³ÍÆ®¸¦ ´ã´ç
-- React DOM ÆÄÀÏÀº ½ÇÁ¦ DOM¿¡ ·»´õ¸µÀ» ´ã´ç
-- Babel : ÀÚ¹Ù½ºÅ©¸³Æ® ÄÄÆÄÀÏ·¯. ES6 -> ES5
-- ÄÄÆ÷³ÍÆ®´Â ÀÚ¹Ù½ºÅ©¸³Æ® Å¬·¡½º, ÂüÁ¶ ½Ã <ÄÄÆ÷³ÍÆ® ¸í/> Çü½ÄÀ¸·Î ¾²ÀÓ.
-  ¼Ò¹®ÀÚ·Î ¾²¸é <div> ³ª <span> °°Àº HTML ÅÂ±×·Î ÇØ¼®µÇ±â ¶§¹®¿¡ ¹Ýµå½Ã ´ë¹®ÀÚ·Î ½ÃÀÛ
+# React.JS ì‹œìž‘í•˜ê¸°
+- React íŒŒì¼ì€ ì»´í¬ë„ŒíŠ¸ë¥¼ ë‹´ë‹¹
+- React DOM íŒŒì¼ì€ ì‹¤ì œ DOMì— ë Œë”ë§ì„ ë‹´ë‹¹
+- Babel : ìžë°”ìŠ¤í¬ë¦½íŠ¸ ì»´íŒŒì¼ëŸ¬. ES6 -> ES5
+- ì»´í¬ë„ŒíŠ¸ëŠ” ìžë°”ìŠ¤í¬ë¦½íŠ¸ í´ëž˜ìŠ¤, ì°¸ì¡° ì‹œ <ì»´í¬ë„ŒíŠ¸ ëª…/> í˜•ì‹ìœ¼ë¡œ ì“°ìž„.
+  ì†Œë¬¸ìžë¡œ ì“°ë©´ <div> ë‚˜ <span> ê°™ì€ HTML íƒœê·¸ë¡œ í•´ì„ë˜ê¸° ë•Œë¬¸ì— ë°˜ë“œì‹œ ëŒ€ë¬¸ìžë¡œ ì‹œìž‘
 
-ES6 Å¬·¡½º(Class)
-- ES6¿¡ »õ·Î µµÀÔµÈ ¹®¹ý.
-- React¸¦ »ç¿ëÇÒ ¶§´Â ÄÄÆ÷³ÍÆ®¸¦ class ¶Ç´Â ÇÔ¼ö·Î Á¤ÀÇÇÒ ¼ö ÀÖÀ½. React ÄÄÆ÷³ÍÆ® class¸¦ Á¤ÀÇÇÏ·Á¸é React.Component¸¦ »ó¼Ó¹Þ¾Æ¾ß ÇÔ.
-- »ç¿ë Àü ¹Ýµå½Ã ¼±¾ðÀÌ µÇ¾î¾ß ÇÑ´Ù! ¼±¾ðÇÏÁö ¾Ê°í »ç¿ëÇÒ °æ¿ì ReferenceError ¹ß»ý.
-- »ý¼ºÀÚ ¸Þ¼Òµå°¡ ÀÖ´Ù. Javascript Å¬·¡½º ¾È¿¡¼­´Â ¸Þ¼Òµå¸¸ ¸¸µé ¼ö ÀÖ´Ù.
-- Å¸ °´Ã¼Çü ¾ð¾îµéÃ³·³ 
-
-
+ES6 í´ëž˜ìŠ¤(Class)
+- ES6ì— ìƒˆë¡œ ë„ìž…ëœ ë¬¸ë²•.
+- Reactë¥¼ ì‚¬ìš©í•  ë•ŒëŠ” ì»´í¬ë„ŒíŠ¸ë¥¼ class ë˜ëŠ” í•¨ìˆ˜ë¡œ ì •ì˜í•  ìˆ˜ ìžˆìŒ. React ì»´í¬ë„ŒíŠ¸ classë¥¼ ì •ì˜í•˜ë ¤ë©´ React.Componentë¥¼ ìƒì†ë°›ì•„ì•¼ í•¨.
+- ì‚¬ìš© ì „ ë°˜ë“œì‹œ ì„ ì–¸ì´ ë˜ì–´ì•¼ í•œë‹¤! ì„ ì–¸í•˜ì§€ ì•Šê³  ì‚¬ìš©í•  ê²½ìš° ReferenceError ë°œìƒ.
+- ìƒì„±ìž ë©”ì†Œë“œê°€ ìžˆë‹¤. Javascript í´ëž˜ìŠ¤ ì•ˆì—ì„œëŠ” ë©”ì†Œë“œë§Œ ë§Œë“¤ ìˆ˜ ìžˆë‹¤.
+- íƒ€ ê°ì²´í˜• ì–¸ì–´ë“¤ì²˜ëŸ¼ 
 
 
 
-Æ¯Â¡ 3°¡Áö
-1. µ¶¸³ÀûÀÎ ÄÄÆ÷³ÍÆ®
-  - React´Â UI¸¦ ¿©·¯ ÄÄÆ÷³ÍÆ®·Î ÂÉ°³¾î ¸¸µç´Ù.
-  - °¢ ºÎºÐµéÀ» µ¶¸³µÈ ÄÄÆ÷³ÍÆ®·Î ¸¸µé°í, ÀÌ¸¦ Á¶¸³ÇØ È­¸éÀ» ±¸¼ºÇÑ´Ù.
-  - ÇÏ³ª¸¦ ¼öÁ¤ÇØµµ ÀüÃ¼ ÆäÀÌÁö¿¡ ¹Ý¿µÇÒ ¼ö ÀÖ´Ù. µû¶ó¼­ À¯Áöº¸¼ö°¡ ½¬¿öÁø´Ù.
-
-2. ´Ü¹æÇâ µ¥ÀÌÅÍ Èå¸§
-  - µ¥ÀÌÅÍ Èå¸§¿¡¼­ ÀÏ¾î³ª´Â º¯È­¸¦ ¿¹ÃøÇÒ ¼ö ÀÖ´Ù.
-  - µ¥ÀÌÅÍ Èå¸§ÀÇ ÀÌÇØ¿Í °ü¸®°¡ ¿ëÀÌÇÏ´Ù.
-
-[Á¤ÀÇ¿Í ¸ñÀû ÀÌÇØÇÏ±â]
-props °¡ ¹¹ÇÏ´Â °ÅÁö?
-  - »óÀ§ ÄÄÆ÷³ÍÆ®°¡ ÇÏÀ§ ÄÄÆ÷³ÍÆ®¿¡ °ªÀ» Àü´ÞÇÒ ¶§ »ç¿ëÇÑ´Ù.(´Ü¹æÇâ µ¥ÀÌÅÍ Èå¸§)
-  - ÇÁ·ÎÆÛÆ¼´Â ¼öÁ¤ÇÒ ¼ö ¾ø´Ù´Â Æ¯Â¡ÀÌ ÀÖ´Ù.(ÀÚ½Ä ÀÔÀå¿¡¼­´Â ÀÐ±â Àü¿ë µ¥ÀÌÅÍ)
-  - ¹®ÀÚ¿­ Àü´ÞÀº ""¸¦, ±× ¿ÜÀÇ Å¸ÀÔ¿¡´Â {}¸¦ ÀÌ¿ëÇØ Àü´ÞÇÑ´Ù.
-children Àº ¹¹ÇÏ´Â°ÅÁö?
-Á¦¾à¾ø´Â Âï¾î³»±â.
-ÅÂ±× ³»ºÎ¿¡ °ªÀ» ±×·ÁÁØ´Ù.
-±×·³ ¿ëµµ°¡ ¾î¶»°Ô µÇ´Â°ÅÁö?
-  - ¸¹Àº °ªÀ» Âï¾î³»´Â ¿ëµµ?
-  ±×·¯¸é probs ´Â ¿Ö ÇÊ¿äÇÑ°ÅÁö?
-
-JS¿Í HTMLÀ» ÇÕÃÄ¼­ »ç¿ëÇÑ´Ù.
-> PHP¶û HTMLÀ» ÇÕÃÄ¼­ »ç¿ëÇßÀ» ¶§ ÁÁÀº È¿°ú¸¦ ¹ßÈÖÇÏµí
-JS¿Í HTMLÀ» ÇÕÃÄ¼­ JSX¸¦ ¸¸µé¾ú°í, ÀÌ·ÎÀÎÇØ Àç»ç¿ë¼ºÀ» ³ô¿´´Ù.
-
-±¸ºÐÀº Ã¹ ±ÛÀÚ¸¦ ´ë¹®ÀÚ·Î ÀÛ¼ºÇÑ´Ù.
-¼Ò¹®ÀÚ·Î »ç¿ëÇÏ¸é ÅÂ±×·Î ÀÐ°ÔµÈ´Ù.
-
-¹Ùº§À» »ç¿ëÇØ¼­ ÄÄÆÄÀÏ ÇØÁà¾ß ÇÑ´Ù.
-childrenÀº ¹«ÇÑÈ÷ Âï¾î³»µµ »ó°ü ¾ø´Ù.
-
-ÇÔ¼öÀÇ »ç¿ëÀº <Header /> ¶Ç´Â <Wrapper></Wrapper>¿Í °°ÀÌ »ç¿ëÇÑ´Ù.
-º¯¼öÀÇ »ç¿ëÀº {}·Î ¹­¾î¼­ »ç¿ëÇÑ´Ù.
 
 
-reflow / repaint¿¡ ´ëÇØ¼­ Ã£¾Æº¸±â.
-reflow ´Â ...
-DOM †ëÀÇ ·¹ÀÌ¾Æ¿ô ¼öÄ¡(W,H,Pos) º¯°æ ½Ã ¿µÇâ ¹ÞÀº ¸ðµç ³ëµåÀÇ ¼öÄ¡¸¦ ´Ù½Ã °è»êÇÏ¿©, ·»´õ Æ®¸®¸¦ Àç»ý¼ºÇÏ´Â °úÁ¤ÀÌ¸ç ¶ÇÇÑ, Reflow °úÁ¤ÀÌ ³¡³­ ÈÄ Àç »ý¼ºµÈ ·»´õ Æ®¸®¸¦ ´Ù½Ã ±×¸®°Ô µÇ´Âµ¥ ÀÌ °úÁ¤À» repaint ¶ó°í ÇÕ´Ï´Ù.
-repaint´Â
-´Ù½Ã ±×¸®´Â °Í.
-CSS°¡ ¹Ù²î¾ú°Å³ª, HTML ±¸Á¶°¡ º¯°æµÇ¾úÀ» ¶§ 
+íŠ¹ì§• 3ê°€ì§€
+1. ë…ë¦½ì ì¸ ì»´í¬ë„ŒíŠ¸
+  - ReactëŠ” UIë¥¼ ì—¬ëŸ¬ ì»´í¬ë„ŒíŠ¸ë¡œ ìª¼ê°œì–´ ë§Œë“ ë‹¤.
+  - ê° ë¶€ë¶„ë“¤ì„ ë…ë¦½ëœ ì»´í¬ë„ŒíŠ¸ë¡œ ë§Œë“¤ê³ , ì´ë¥¼ ì¡°ë¦½í•´ í™”ë©´ì„ êµ¬ì„±í•œë‹¤.
+  - í•˜ë‚˜ë¥¼ ìˆ˜ì •í•´ë„ ì „ì²´ íŽ˜ì´ì§€ì— ë°˜ì˜í•  ìˆ˜ ìžˆë‹¤. ë”°ë¼ì„œ ìœ ì§€ë³´ìˆ˜ê°€ ì‰¬ì›Œì§„ë‹¤.
+
+2. ë‹¨ë°©í–¥ ë°ì´í„° íë¦„
+  - ë°ì´í„° íë¦„ì—ì„œ ì¼ì–´ë‚˜ëŠ” ë³€í™”ë¥¼ ì˜ˆì¸¡í•  ìˆ˜ ìžˆë‹¤.
+  - ë°ì´í„° íë¦„ì˜ ì´í•´ì™€ ê´€ë¦¬ê°€ ìš©ì´í•˜ë‹¤.
+
+[ì •ì˜ì™€ ëª©ì  ì´í•´í•˜ê¸°]
+props ê°€ ë­í•˜ëŠ” ê±°ì§€?
+  - ìƒìœ„ ì»´í¬ë„ŒíŠ¸ê°€ í•˜ìœ„ ì»´í¬ë„ŒíŠ¸ì— ê°’ì„ ì „ë‹¬í•  ë•Œ ì‚¬ìš©í•œë‹¤.(ë‹¨ë°©í–¥ ë°ì´í„° íë¦„)
+  - í”„ë¡œí¼í‹°ëŠ” ìˆ˜ì •í•  ìˆ˜ ì—†ë‹¤ëŠ” íŠ¹ì§•ì´ ìžˆë‹¤.(ìžì‹ ìž…ìž¥ì—ì„œëŠ” ì½ê¸° ì „ìš© ë°ì´í„°)
+  - ë¬¸ìžì—´ ì „ë‹¬ì€ ""ë¥¼, ê·¸ ì™¸ì˜ íƒ€ìž…ì—ëŠ” {}ë¥¼ ì´ìš©í•´ ì „ë‹¬í•œë‹¤.
+children ì€ ë­í•˜ëŠ”ê±°ì§€?
+ì œì•½ì—†ëŠ” ì°ì–´ë‚´ê¸°.
+íƒœê·¸ ë‚´ë¶€ì— ê°’ì„ ê·¸ë ¤ì¤€ë‹¤.
+ê·¸ëŸ¼ ìš©ë„ê°€ ì–´ë–»ê²Œ ë˜ëŠ”ê±°ì§€?
+  - ë§Žì€ ê°’ì„ ì°ì–´ë‚´ëŠ” ìš©ë„?
+  ê·¸ëŸ¬ë©´ probs ëŠ” ì™œ í•„ìš”í•œê±°ì§€?
+
+JSì™€ HTMLì„ í•©ì³ì„œ ì‚¬ìš©í•œë‹¤.
+> PHPëž‘ HTMLì„ í•©ì³ì„œ ì‚¬ìš©í–ˆì„ ë•Œ ì¢‹ì€ íš¨ê³¼ë¥¼ ë°œíœ˜í•˜ë“¯
+JSì™€ HTMLì„ í•©ì³ì„œ JSXë¥¼ ë§Œë“¤ì—ˆê³ , ì´ë¡œì¸í•´ ìž¬ì‚¬ìš©ì„±ì„ ë†’ì˜€ë‹¤.
+
+êµ¬ë¶„ì€ ì²« ê¸€ìžë¥¼ ëŒ€ë¬¸ìžë¡œ ìž‘ì„±í•œë‹¤.
+ì†Œë¬¸ìžë¡œ ì‚¬ìš©í•˜ë©´ íƒœê·¸ë¡œ ì½ê²Œëœë‹¤.
+
+ë°”ë²¨ì„ ì‚¬ìš©í•´ì„œ ì»´íŒŒì¼ í•´ì¤˜ì•¼ í•œë‹¤.
+childrenì€ ë¬´í•œížˆ ì°ì–´ë‚´ë„ ìƒê´€ ì—†ë‹¤.
+
+í•¨ìˆ˜ì˜ ì‚¬ìš©ì€ <Header /> ë˜ëŠ” <Wrapper></Wrapper>ì™€ ê°™ì´ ì‚¬ìš©í•œë‹¤.
+ë³€ìˆ˜ì˜ ì‚¬ìš©ì€ {}ë¡œ ë¬¶ì–´ì„œ ì‚¬ìš©í•œë‹¤.
+
+
+reflow / repaintì— ëŒ€í•´ì„œ ì°¾ì•„ë³´ê¸°.
+reflow ëŠ” ...
+DOM Â†è‚²?ë ˆì´ì•„ì›ƒ ìˆ˜ì¹˜(W,H,Pos) ë³€ê²½ ì‹œ ì˜í–¥ ë°›ì€ ëª¨ë“  ë…¸ë“œì˜ ìˆ˜ì¹˜ë¥¼ ë‹¤ì‹œ ê³„ì‚°í•˜ì—¬, ë Œë” íŠ¸ë¦¬ë¥¼ ìž¬ìƒì„±í•˜ëŠ” ê³¼ì •ì´ë©° ë˜í•œ, Reflow ê³¼ì •ì´ ëë‚œ í›„ ìž¬ ìƒì„±ëœ ë Œë” íŠ¸ë¦¬ë¥¼ ë‹¤ì‹œ ê·¸ë¦¬ê²Œ ë˜ëŠ”ë° ì´ ê³¼ì •ì„ repaint ë¼ê³  í•©ë‹ˆë‹¤.
+repaintëŠ”
+ë‹¤ì‹œ ê·¸ë¦¬ëŠ” ê²ƒ.
+CSSê°€ ë°”ë€Œì—ˆê±°ë‚˜, HTML êµ¬ì¡°ê°€ ë³€ê²½ë˜ì—ˆì„ ë•Œ 
 
 [HOOK]
 useEffect()
-Ã¹ ¹øÂ° ÀÎÀÚ·Î ÇÔ¼ö¸¦ °¡Áø´Ù.
-  ÇÔ¼ö´Â return ÇÏÁö ¾ÊÀ¸¸ç, ½ÇÇàÇÒ ÇÔ¼ö¸¦ ³Ö¾îÁÖ¸é µÈ´Ù.
-µÎ ¹øÂ° ÀÎÀÚ·Î ¹è¿­À» °¡Áú ¼ö ÀÖ´Ù.
-  ¹è¿­Àº ÀÇÁ¸¼º °ª(º¯°æµÇ´Â »óÅÂ °ª)À» ³Ö¾îÁÖ¸é µÈ´Ù.
-  º¯°æµÇ´Â °ªÀ» ³Ö¾îÁÖ¸é ÇØ´ç °ªÀÌ º¯°æµÉ ¶§¸¶´Ù 1¹ø ÀÎÀÚ·Î ³Ö¾îÁØ ÇÔ¼ö¸¦ ½ÇÇàÇÑ´Ù
-  µÎ ¹øÂ° ÀÎÀÚ defendency array¸¦ ³Ö¾îÁÖÁö ¾ÊÀ¸¸é ¸ðµç º¯È­¿¡ ¹ÝÀÀÇÏ°Ô µÈ´Ù.
-  ºó ¹è¿­À» ³Ö¾îÁÖ¸é Ã³À½¿¡¸¸ ¹ÝÀÀÇÑ´Ù.
+ì²« ë²ˆì§¸ ì¸ìžë¡œ í•¨ìˆ˜ë¥¼ ê°€ì§„ë‹¤.
+  í•¨ìˆ˜ëŠ” return í•˜ì§€ ì•Šìœ¼ë©°, ì‹¤í–‰í•  í•¨ìˆ˜ë¥¼ ë„£ì–´ì£¼ë©´ ëœë‹¤.
+ë‘ ë²ˆì§¸ ì¸ìžë¡œ ë°°ì—´ì„ ê°€ì§ˆ ìˆ˜ ìžˆë‹¤.
+  ë°°ì—´ì€ ì˜ì¡´ì„± ê°’(ë³€ê²½ë˜ëŠ” ìƒíƒœ ê°’)ì„ ë„£ì–´ì£¼ë©´ ëœë‹¤.
+  ë³€ê²½ë˜ëŠ” ê°’ì„ ë„£ì–´ì£¼ë©´ í•´ë‹¹ ê°’ì´ ë³€ê²½ë  ë•Œë§ˆë‹¤ 1ë²ˆ ì¸ìžë¡œ ë„£ì–´ì¤€ í•¨ìˆ˜ë¥¼ ì‹¤í–‰í•œë‹¤
+  ë‘ ë²ˆì§¸ ì¸ìž defendency arrayë¥¼ ë„£ì–´ì£¼ì§€ ì•Šìœ¼ë©´ ëª¨ë“  ë³€í™”ì— ë°˜ì‘í•˜ê²Œ ëœë‹¤.
+  ë¹ˆ ë°°ì—´ì„ ë„£ì–´ì£¼ë©´ ì²˜ìŒì—ë§Œ ë°˜ì‘í•œë‹¤.
 
 const [state, setState]
-¿Í °°Àº ÇüÅÂ¸¦ ÅëÇØ¼­ ¹è¿­ÀÇ °¢ º¯¼ö¿¡ ¿øÇÏ´Â °ªÀ» ³ÖÀ» ¼ö ÀÖ´Ù.
-?? state°¡ ÇöÀç °ªÀÌ°í setState°¡ º¯°æÇÒ °ªÀÌ¾ú³ª?
-state´Â º¯¼ö ¸í
-setState´Â ÇÔ¼ö ¸í
-React.useState()ÀÇ °ýÈ£ ¾È¿¡ ÃÊ±â°ª ³Ö¾îÁÖ°í
-setState()ÇÔ¼ö ¸¸µé°í °ýÈ£ ¾È¿¡ º¯°æÇÒ °ª(°ª || ÇÔ¼ö)¸¸ ³Ö¾îÁÖ´Â ¹æ½ÄÀ¸·Î ÇÑ´Ù.
-  - prev¶ó´Â ÀÌÀü°ªÀ» ÀÎÀÚ·Î ¹ÞÀ» ¼ö ÀÖ´Ù. (prev) => !prev ÀÇ ÇüÅÂ·Î T/F¸¦ ¹Ù²Ü ¼ö ÀÖ´Ù.
+ì™€ ê°™ì€ í˜•íƒœë¥¼ í†µí•´ì„œ ë°°ì—´ì˜ ê° ë³€ìˆ˜ì— ì›í•˜ëŠ” ê°’ì„ ë„£ì„ ìˆ˜ ìžˆë‹¤.
+?? stateê°€ í˜„ìž¬ ê°’ì´ê³  setStateê°€ ë³€ê²½í•  ê°’ì´ì—ˆë‚˜?
+stateëŠ” ë³€ìˆ˜ ëª…
+setStateëŠ” í•¨ìˆ˜ ëª…
+React.useState()ì˜ ê´„í˜¸ ì•ˆì— ì´ˆê¸°ê°’ ë„£ì–´ì£¼ê³ 
+setState()í•¨ìˆ˜ ë§Œë“¤ê³  ê´„í˜¸ ì•ˆì— ë³€ê²½í•  ê°’(ê°’ || í•¨ìˆ˜)ë§Œ ë„£ì–´ì£¼ëŠ” ë°©ì‹ìœ¼ë¡œ í•œë‹¤.
+  - prevë¼ëŠ” ì´ì „ê°’ì„ ì¸ìžë¡œ ë°›ì„ ìˆ˜ ìžˆë‹¤. (prev) => !prev ì˜ í˜•íƒœë¡œ T/Fë¥¼ ë°”ê¿€ ìˆ˜ ìžˆë‹¤.
 
-state ³»ºÎ °ªÀº ºÒº¯¼ºÀ» À¯ÁöÇØ¾ß ÇÑ´Ù.
+state ë‚´ë¶€ ê°’ì€ ë¶ˆë³€ì„±ì„ ìœ ì§€í•´ì•¼ í•œë‹¤.
 
-Àç»ç¿ë °¡´ÉÇÑ ÄÄÆ÷³ÍÆ®¸¦ ¸¸µç´Ù.
-> º¯°æÁ¡ÀÌ ÀÖ´Â ºÎºÐ¸¸ Àß¶ó´Ù°¡
-¶Ç´Â ¿ëµµº°·Î ¹­¾î¼­ °ü¸®.
+ìž¬ì‚¬ìš© ê°€ëŠ¥í•œ ì»´í¬ë„ŒíŠ¸ë¥¼ ë§Œë“ ë‹¤.
+> ë³€ê²½ì ì´ ìžˆëŠ” ë¶€ë¶„ë§Œ ìž˜ë¼ë‹¤ê°€
+ë˜ëŠ” ìš©ë„ë³„ë¡œ ë¬¶ì–´ì„œ ê´€ë¦¬.
 
-# ÄÄÆ÷³ÍÆ® »çÀÌµå ÀÌÆåÆ® ´Ù·ç±â
-#### »çÀÌµå ÀÌÆåÆ® = ºÎ¼ö È¿°ú
+# ì»´í¬ë„ŒíŠ¸ ì‚¬ì´ë“œ ì´íŽ™íŠ¸ ë‹¤ë£¨ê¸°
+#### ì‚¬ì´ë“œ ì´íŽ™íŠ¸ = ë¶€ìˆ˜ íš¨ê³¼
 
-#### useState = lazy initialize ¶ó´Â°Ô ÀÖ´Ù.
-¾Õ¿¡´Â °ª, µÚ¿¡´Â ÇÔ¼ö´Ù.
+#### useState = lazy initialize ë¼ëŠ”ê²Œ ìžˆë‹¤.
+ì•žì—ëŠ” ê°’, ë’¤ì—ëŠ” í•¨ìˆ˜ë‹¤.
 
 const [text, setText] = React.useState(() => {
         console.log("   Child useState");
         return "";
 });
 
-text´Â °ª, setText´Â ÇÔ¼ö°¡ µÈ´Ù.
-setText(º¯°æÇÒ °ª);ÀÇ ÇüÅÂ·Î Ã³¸®ÇÏ¸é µÈ´Ù.
-React.useState() ¿©±â¿¡ ÃÊ±â°ªÀ» ³Ö¾îÁÖ¸é µÈ´Ù.
-ÇÔ¼ö¸¦ ³Ö¾î¼­ µ¿ÀÛ½Ã±â¸¦ ¾à°£ ´ÊÃâ ¼ö ÀÖ´Ù.
-  > localStorage¿¡ Á¢±ÙÇÒ ¶§ °°Àº °æ¿ìÃ³·³ ¾çÀÌ ¸¹°Å³ª ÇØ¼­ ·ÎµùÀÌ ´Ê¾îÁú °æ¿ì ÇÔ¼öÇüÅÂ·Î ¸¸µé¸é
-  ±× ºÎºÐÀ» ¾î´ÀÁ¤µµ ÇØ°áÇÒ ¼ö ÀÖ´Ù. ·Î±×°°Àº°É Âï¾î¾ß ÇÒ ¶§µµ ÀÌ·¸°Ô »ç¿ëÇÑ´Ù.
+textëŠ” ê°’, setTextëŠ” í•¨ìˆ˜ê°€ ëœë‹¤.
+setText(ë³€ê²½í•  ê°’);ì˜ í˜•íƒœë¡œ ì²˜ë¦¬í•˜ë©´ ëœë‹¤.
+React.useState() ì—¬ê¸°ì— ì´ˆê¸°ê°’ì„ ë„£ì–´ì£¼ë©´ ëœë‹¤.
+í•¨ìˆ˜ë¥¼ ë„£ì–´ì„œ ë™ìž‘ì‹œê¸°ë¥¼ ì•½ê°„ ëŠ¦ì¶œ ìˆ˜ ìžˆë‹¤.
+  > localStorageì— ì ‘ê·¼í•  ë•Œ ê°™ì€ ê²½ìš°ì²˜ëŸ¼ ì–‘ì´ ë§Žê±°ë‚˜ í•´ì„œ ë¡œë”©ì´ ëŠ¦ì–´ì§ˆ ê²½ìš° í•¨ìˆ˜í˜•íƒœë¡œ ë§Œë“¤ë©´
+  ê·¸ ë¶€ë¶„ì„ ì–´ëŠì •ë„ í•´ê²°í•  ìˆ˜ ìžˆë‹¤. ë¡œê·¸ê°™ì€ê±¸ ì°ì–´ì•¼ í•  ë•Œë„ ì´ë ‡ê²Œ ì‚¬ìš©í•œë‹¤.
 
 #### useEffect = dependency array
-µÎ ¹øÂ° ÀÎÀÚ·Î ¹è¿­À» ³Ö¾îÁÜÀ¸·Î½á ÀÇÁ¸¼º ¹è¿­À» Ãß°¡ÇÒ ¼ö ÀÖ´Ù.
+ë‘ ë²ˆì§¸ ì¸ìžë¡œ ë°°ì—´ì„ ë„£ì–´ì¤Œìœ¼ë¡œì¨ ì˜ì¡´ì„± ë°°ì—´ì„ ì¶”ê°€í•  ìˆ˜ ìžˆë‹¤.
 
       React.useEffect(() => {
-        // ºó ¹è¿­ÀÌ¸é Ã³À½¿¡¸¸ ¹ÝÀÀ
+        // ë¹ˆ ë°°ì—´ì´ë©´ ì²˜ìŒì—ë§Œ ë°˜ì‘
         console.log("   Child useEffect, no deps");
 
         return () => {
@@ -154,7 +154,7 @@ React.useState() ¿©±â¿¡ ÃÊ±â°ªÀ» ³Ö¾îÁÖ¸é µÈ´Ù.
         }
       }); 
       React.useEffect(() => {
-        // ºó ¹è¿­ÀÌ¸é Ã³À½¿¡¸¸ ¹ÝÀÀ
+        // ë¹ˆ ë°°ì—´ì´ë©´ ì²˜ìŒì—ë§Œ ë°˜ì‘
         console.log("   Child useEffect, empty deps");
         
         return () => {
@@ -162,7 +162,7 @@ React.useState() ¿©±â¿¡ ÃÊ±â°ªÀ» ³Ö¾îÁÖ¸é µÈ´Ù.
         }
       }, []); 
       React.useEffect(() => {
-        // ºó ¹è¿­ÀÌ¸é Ã³À½¿¡¸¸ ¹ÝÀÀ
+        // ë¹ˆ ë°°ì—´ì´ë©´ ì²˜ìŒì—ë§Œ ë°˜ì‘
         console.log("   Child useEffect, [text]");
 
         return () => {
@@ -170,8 +170,8 @@ React.useState() ¿©±â¿¡ ÃÊ±â°ªÀ» ³Ö¾îÁÖ¸é µÈ´Ù.
         }
       }, [text]);
 
-cleanup ÀÌ¶ó´Â°Ô ÀÖ´Âµ¥ useEffect ¿¡¼­ ÇÔ¼ö ³»ºÎ¿¡¼­ returnÀ» ÇÏ°ÔµÇ¸é
-È£Ãâ ½ÃÁ¡ÀÌ º¯°æµÈ´Ù.
+cleanup ì´ë¼ëŠ”ê²Œ ìžˆëŠ”ë° useEffect ì—ì„œ í•¨ìˆ˜ ë‚´ë¶€ì—ì„œ returnì„ í•˜ê²Œë˜ë©´
+í˜¸ì¶œ ì‹œì ì´ ë³€ê²½ëœë‹¤.
 
 #### HOOK FLOW ####
  APP render start
@@ -180,10 +180,10 @@ cleanup ÀÌ¶ó´Â°Ô ÀÖ´Âµ¥ useEffect ¿¡¼­ ÇÔ¼ö ³»ºÎ¿¡¼­ returnÀ» ÇÏ°ÔµÇ¸é
  APP useEffect, no deps
  APP useEffect, empty deps
  APP useEffect, [show]
-############### // Search ¹öÆ° Å¬¸¯ÇØ inputÃ¢À» Ãâ·Â
+############### // Search ë²„íŠ¼ í´ë¦­í•´ inputì°½ì„ ì¶œë ¥
  APP render start
  APP render end
-0¹ø Â° ÀÔ·Â
+0ë²ˆ ì§¸ ìž…ë ¥
     Child render start
     Child useState
     Child render end
@@ -194,21 +194,21 @@ cleanup ÀÌ¶ó´Â°Ô ÀÖ´Âµ¥ useEffect ¿¡¼­ ÇÔ¼ö ³»ºÎ¿¡¼­ returnÀ» ÇÏ°ÔµÇ¸é
     Child useEffect, [text]
  APP useEffect, no deps
  APP useEffect, [show]
-1¹ø Â° ÀÔ·Â // input Ã¢¿¡ "¤¾" ÀÔ·Â
+1ë²ˆ ì§¸ ìž…ë ¥ // input ì°½ì— "ã…Ž" ìž…ë ¥
     Child render start
     Child render end
     Child useEffect [Clean up], no deps
     Child useEffect [Clean up], [text]
     Child useEffect, no deps
     Child useEffect, [text]
-2¹ø Â° ÀÔ·Â // input Ã¢¿¡ "¤¾" Ãß°¡ ÀÔ·Â
+2ë²ˆ ì§¸ ìž…ë ¥ // input ì°½ì— "ã…Ž" ì¶”ê°€ ìž…ë ¥
     Child render start
     Child render end
     Child useEffect [Clean up], no deps
     Child useEffect [Clean up], [text]
     Child useEffect, no deps
     Child useEffect, [text]
- ############### // Search ¹öÆ°À» Å¬¸¯ÇØ inputÃ¢ Á¾·á
+ ############### // Search ë²„íŠ¼ì„ í´ë¦­í•´ inputì°½ ì¢…ë£Œ
  APP render start
  APP render end
     Child useEffect [Clean up], no deps
@@ -219,51 +219,51 @@ cleanup ÀÌ¶ó´Â°Ô ÀÖ´Âµ¥ useEffect ¿¡¼­ ÇÔ¼ö ³»ºÎ¿¡¼­ returnÀ» ÇÏ°ÔµÇ¸é
  APP useEffect, no deps
  APP useEffect, [show]
 
-* Ã¼Å©Æ÷ÀÎÆ®´Â 
-DOM¿¡ º¯È­°¡ »ý°åÀ» ¶§
-1. ºÎ¸ð(APP)ÀÇ render°¡ ³¡³ª°í ÀÚ½Ä(Child)ÀÇ render°¡ ½ÃÀÛÇÑ´Ù.
-2. ÀÚ½ÄÀÇ render°¡ ³¡³ª¸é ÀÚ½ÄÀÇ useEffect°¡ ½ÃÀÛµÈ´Ù.
-3. ÀÚ½ÄÀÇ useEffect°¡ ³¡³ª¸é ±× ÀÌÈÄ¿¡ ºÎ¸ðÀÇ useEffect°¡ ½ÃÀÛµÈ´Ù.
-4. clean upÀ¸·Î ¸¸µé¸é ºÎ¸ðÀÇ useEffect°¡ ¸ÕÀú ½ÇÇàµÈ´Ù.
-5. ÀÚ½Ä¿¡¸¸ º¯È­°¡ ÀÖÀ¸¸é ÀÚ½Ä¸¸ render µÈ´Ù.
-6. dependency array´Â Àü´Þ¹ÞÀº °ªÀÇ º¯È­°¡ ÀÖ´Â °æ¿ì¿¡¸¸ µ¿ÀÛÇÑ´Ù.
+* ì²´í¬í¬ì¸íŠ¸ëŠ” 
+DOMì— ë³€í™”ê°€ ìƒê²¼ì„ ë•Œ
+1. ë¶€ëª¨(APP)ì˜ renderê°€ ëë‚˜ê³  ìžì‹(Child)ì˜ renderê°€ ì‹œìž‘í•œë‹¤.
+2. ìžì‹ì˜ renderê°€ ëë‚˜ë©´ ìžì‹ì˜ useEffectê°€ ì‹œìž‘ëœë‹¤.
+3. ìžì‹ì˜ useEffectê°€ ëë‚˜ë©´ ê·¸ ì´í›„ì— ë¶€ëª¨ì˜ useEffectê°€ ì‹œìž‘ëœë‹¤.
+4. clean upìœ¼ë¡œ ë§Œë“¤ë©´ ë¶€ëª¨ì˜ useEffectê°€ ë¨¼ì € ì‹¤í–‰ëœë‹¤.
+5. ìžì‹ì—ë§Œ ë³€í™”ê°€ ìžˆìœ¼ë©´ ìžì‹ë§Œ render ëœë‹¤.
+6. dependency arrayëŠ” ì „ë‹¬ë°›ì€ ê°’ì˜ ë³€í™”ê°€ ìžˆëŠ” ê²½ìš°ì—ë§Œ ë™ìž‘í•œë‹¤.
 
 
 
-# Ä¿½ºÅÒ ÈÅ ¸¸µé±â
-¹Ýº¹ => ÇÔ¼ö·Î
-ÈÅµéÀÌ ¹Ýº¹ => Ä¿½ºÅÒ ÈÅÀ¸·Î
-ÀÌ¸§Àº use·Î ½ÃÀÛÇÏ°í µÞºÎºÐÀº Ä«¸áÄÉÀÌ½º·Î ¸¸µç´Ù.
+# ì»¤ìŠ¤í…€ í›… ë§Œë“¤ê¸°
+ë°˜ë³µ => í•¨ìˆ˜ë¡œ
+í›…ë“¤ì´ ë°˜ë³µ => ì»¤ìŠ¤í…€ í›…ìœ¼ë¡œ
+ì´ë¦„ì€ useë¡œ ì‹œìž‘í•˜ê³  ë’·ë¶€ë¶„ì€ ì¹´ë©œì¼€ì´ìŠ¤ë¡œ ë§Œë“ ë‹¤.
 
-# React ½ºÅ¸ÀÏ Àû¿ëÇÏ±â.
-ÇÔ¼ö¿¡ ÀÎÀÚ·Î ¹Þ¾Æ¿Â´Ù.
+# React ìŠ¤íƒ€ì¼ ì ìš©í•˜ê¸°.
+í•¨ìˆ˜ì— ì¸ìžë¡œ ë°›ì•„ì˜¨ë‹¤.
 
 
-## 220527 ÇÐ½À Á¤¸® ##
-# ÀÌº¥Æ® Ã³¸®ÇÏ±â
-React ¿¤¸®¸ÕÆ®¿¡¼­ ÀÌº¥Æ®¸¦ Ã³¸®ÇÏ´Â ¹æ½ÄÀº DOM ¿¤¸®¸ÕÆ®¿¡¼­ ÀÌº¥Æ®¸¦ Ã³¸®ÇÏ´Â ¹æ½Ä°ú ¸Å¿ì À¯»çÇÕ´Ï´Ù.
+## 220527 í•™ìŠµ ì •ë¦¬ ##
+# ì´ë²¤íŠ¸ ì²˜ë¦¬í•˜ê¸°
+React ì—˜ë¦¬ë¨¼íŠ¸ì—ì„œ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë°©ì‹ì€ DOM ì—˜ë¦¬ë¨¼íŠ¸ì—ì„œ ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë°©ì‹ê³¼ ë§¤ìš° ìœ ì‚¬í•©ë‹ˆë‹¤.
 
-- ReactÀÇ ÀÌº¥Æ®´Â ¼Ò¹®ÀÚ ´ë»ê Ä«¸á ÄÉÀÌ½º¸¦ »ç¿ëÇÕ´Ï´Ù.
-- JSX¸¦ »ç¿ëÇÏ¿© ¹®ÀÚ¿­ÀÌ ¾Æ´Ñ ÇÔ¼ö·Î ÀÌº¥Æ® ÇÚµé·¯¸¦ Àü´ÞÇÕ´Ï´Ù.
+- Reactì˜ ì´ë²¤íŠ¸ëŠ” ì†Œë¬¸ìž ëŒ€ì‚° ì¹´ë©œ ì¼€ì´ìŠ¤ë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.
+- JSXë¥¼ ì‚¬ìš©í•˜ì—¬ ë¬¸ìžì—´ì´ ì•„ë‹Œ í•¨ìˆ˜ë¡œ ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ë¥¼ ì „ë‹¬í•©ë‹ˆë‹¤.
 
-¿¹¸¦µé¾î, htmlÀº ´ÙÀ½°ú °°½À´Ï´Ù.
+ì˜ˆë¥¼ë“¤ì–´, htmlì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.
 <button onclick="activateLasers()">
   Activate Lasers
 </button>
 
-React ¿¡¼­´Â ¾à°£ ´Ù¸¨´Ï´Ù.
+React ì—ì„œëŠ” ì•½ê°„ ë‹¤ë¦…ë‹ˆë‹¤.
 <buttom onClick={activateLasers}>
   Activate Lasers
 </button>
 
-¶Ç ´Ù¸¥ Â÷ÀÌÁ¡À¸·Î, React¿¡¼­´Â false¸¦ ¹ÝÈ¯ÇØµµ ±âº» µ¿ÀÛÀ» ¹æÁöÇÒ ¼ö ¾ø½À´Ï´Ù. ¹Ýµå½Ã
-preventDefault¸¦ ¸í½ÃÀûÀ¸·Î È£ÃâÇØ¾ß ÇÕ´Ï´Ù. ¿¹¸¦ µé¾î, ÀÏ¹Ý HTML¿¡¼­ ÆûÀ» Á¦ÃâÇÒ ¶§ °¡Áö°í ÀÖ´Â ±âº» µ¿ÀÛÀ» ¹æÁöÇÏ±â À§ÇØ ´ÙÀ½°ú °°Àº ÄÚµå¸¦ ÀÛ¼ºÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ë˜ ë‹¤ë¥¸ ì°¨ì´ì ìœ¼ë¡œ, Reactì—ì„œëŠ” falseë¥¼ ë°˜í™˜í•´ë„ ê¸°ë³¸ ë™ìž‘ì„ ë°©ì§€í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë°˜ë“œì‹œ
+preventDefaultë¥¼ ëª…ì‹œì ìœ¼ë¡œ í˜¸ì¶œí•´ì•¼ í•©ë‹ˆë‹¤. ì˜ˆë¥¼ ë“¤ì–´, ì¼ë°˜ HTMLì—ì„œ í¼ì„ ì œì¶œí•  ë•Œ ê°€ì§€ê³  ìžˆëŠ” ê¸°ë³¸ ë™ìž‘ì„ ë°©ì§€í•˜ê¸° ìœ„í•´ ë‹¤ìŒê³¼ ê°™ì€ ì½”ë“œë¥¼ ìž‘ì„±í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 <form onsubmit="console.log('You Clicked Submit.'); return false">
   <button type="submit">Submit</button>
 </form>
 
-React ¿¡¼­´Â ´ÙÀ½°ú °°ÀÌ ÀÛ¼ºÇÒ ¼ö ÀÖ½À´Ï´Ù.
+React ì—ì„œëŠ” ë‹¤ìŒê³¼ ê°™ì´ ìž‘ì„±í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 function Form() {
   function handleSubmit(e) {
     e.preventDefault();
@@ -276,18 +276,18 @@ function Form() {
   );
 }
 
-¿©±â¼­ e´Â ÇÕ¼º ÀÌº¥Æ® ÀÔ´Ï´Ù. React´Â W3C ¸í¼¼¿¡ µû¶ó ÇÕ¼º ÀÌº¥Æ®¸¦ Á¤ÀÇÇÏ±â ¶§¹®¿¡ ºí¿ìÀú È£È¯¼º¿¡ ´ëÇØ °ÆÁ¤ÇÒ ÇÊ¿ä°¡ ¾ø½À´Ï´Ù. React ÀÌº¥Æ®´Â ºê¶ó¿ìÀú °íÀ¯ ÀÌº¥Æ®¿Í Á¤È®È÷ µ¿ÀÏÇÏ°Ô µ¿ÀÛÇÏÁö ¾Ê½À´Ï´Ù.
+ì—¬ê¸°ì„œ eëŠ” í•©ì„± ì´ë²¤íŠ¸ ìž…ë‹ˆë‹¤. ReactëŠ” W3C ëª…ì„¸ì— ë”°ë¼ í•©ì„± ì´ë²¤íŠ¸ë¥¼ ì •ì˜í•˜ê¸° ë•Œë¬¸ì— ë¸”ìš°ì € í˜¸í™˜ì„±ì— ëŒ€í•´ ê±±ì •í•  í•„ìš”ê°€ ì—†ìŠµë‹ˆë‹¤. React ì´ë²¤íŠ¸ëŠ” ë¸Œë¼ìš°ì € ê³ ìœ  ì´ë²¤íŠ¸ì™€ ì •í™•ížˆ ë™ì¼í•˜ê²Œ ë™ìž‘í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 
-React¸¦ »ç¿ëÇÒ ¶§ DOM ¿¤¸®¸ÕÆ®°¡ »ý¼ºµÈ ÈÄ ¸®½º³Ê¸¦ Ãß°¡ÇÏ±â À§ÇØ addEventListener¸¦ È£ÃâÇÒ ÇÊ¿ä°¡ ¾ø½À´Ï´Ù. ´ë½Å, ¿¤¸®¸ÕÆ®°¡ Ã³À½ ·»´õ¸µµÉ ¶§ ¸®½º³Ê¸¦ Á¦°øÇÏ¸é µË´Ï´Ù.
+Reactë¥¼ ì‚¬ìš©í•  ë•Œ DOM ì—˜ë¦¬ë¨¼íŠ¸ê°€ ìƒì„±ëœ í›„ ë¦¬ìŠ¤ë„ˆë¥¼ ì¶”ê°€í•˜ê¸° ìœ„í•´ addEventListenerë¥¼ í˜¸ì¶œí•  í•„ìš”ê°€ ì—†ìŠµë‹ˆë‹¤. ëŒ€ì‹ , ì—˜ë¦¬ë¨¼íŠ¸ê°€ ì²˜ìŒ ë Œë”ë§ë  ë•Œ ë¦¬ìŠ¤ë„ˆë¥¼ ì œê³µí•˜ë©´ ë©ë‹ˆë‹¤.
 
-ES6 Å¬·¡½º¸¦ »ç¿ëÇÏ¿© ÄÄÆ÷³ÍÆ®¸¦ Á¤ÀÇÇÒ ¶§, ÀÏ¹ÝÀûÀÎ ÆÐÅÏÀº ÀÌº¥Æ® ÇÚµé·¯¸¦ Å¬·¡½ºÀÇ ¸Þ¼­µå·Î ¸¸µå´Â °ÍÀÔ´Ï´Ù. ¿¹¸¦ µé¾î, Toggle ÄÄÆ÷³ÍÆ®´Â »ç¿ëÀÚ°¡ "ON" °ú "OFF" »óÅÂ¸¦ Åä±Û ÇÒ ¼ö ÀÖ´Â ¹öÆ°À» ·»´õ¸µ ÇÕ´Ï´Ù.
+ES6 í´ëž˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ì—¬ ì»´í¬ë„ŒíŠ¸ë¥¼ ì •ì˜í•  ë•Œ, ì¼ë°˜ì ì¸ íŒ¨í„´ì€ ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ë¥¼ í´ëž˜ìŠ¤ì˜ ë©”ì„œë“œë¡œ ë§Œë“œëŠ” ê²ƒìž…ë‹ˆë‹¤. ì˜ˆë¥¼ ë“¤ì–´, Toggle ì»´í¬ë„ŒíŠ¸ëŠ” ì‚¬ìš©ìžê°€ "ON" ê³¼ "OFF" ìƒíƒœë¥¼ í† ê¸€ í•  ìˆ˜ ìžˆëŠ” ë²„íŠ¼ì„ ë Œë”ë§ í•©ë‹ˆë‹¤.
 
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
 
-    // ÄÝ¹é¿¡¼­ `this`°¡ ÀÛµ¿ÇÏ·Á¸é ¾Æ·¡¿Í °°ÀÌ ¹ÙÀÎµù ÇØÁà¾ß ÇÕ´Ï´Ù.
+    // ì½œë°±ì—ì„œ `this`ê°€ ìž‘ë™í•˜ë ¤ë©´ ì•„ëž˜ì™€ ê°™ì´ ë°”ì¸ë”© í•´ì¤˜ì•¼ í•©ë‹ˆë‹¤.
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -311,17 +311,17 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-JSX ÄÝ¹é ¾È¿¡¼­ thisÀÇ ÀÇ¹Ì¿¡ ´ëÇØ ÁÖÀÇÇØ¾ß ÇÕ´Ï´Ù. Javascript¿¡¼­ Å¬·¡½º ¸Þ¼­µå´Â ±âº»ÀûÀ¸·Î ¹ÙÀÎµùµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù. this.handleClickÀ» ¹ÙÀÎµùÇÏÁö ¾Ê°í onClick¿¡ Àü´ÞÇÏ¿´´Ù¸é, ÇÔ¼ö°¡ ½ÇÁ¦ È£ÃâµÉ ¶§ this´Â undefined°¡ µË´Ï´Ù.
+JSX ì½œë°± ì•ˆì—ì„œ thisì˜ ì˜ë¯¸ì— ëŒ€í•´ ì£¼ì˜í•´ì•¼ í•©ë‹ˆë‹¤. Javascriptì—ì„œ í´ëž˜ìŠ¤ ë©”ì„œë“œëŠ” ê¸°ë³¸ì ìœ¼ë¡œ ë°”ì¸ë”©ë˜ì–´ ìžˆì§€ ì•ŠìŠµë‹ˆë‹¤. this.handleClickì„ ë°”ì¸ë”©í•˜ì§€ ì•Šê³  onClickì— ì „ë‹¬í•˜ì˜€ë‹¤ë©´, í•¨ìˆ˜ê°€ ì‹¤ì œ í˜¸ì¶œë  ë•Œ thisëŠ” undefinedê°€ ë©ë‹ˆë‹¤.
 
-ÀÌ´Â React¸¸ÀÇ Æ¯¼öÇÑ µ¿ÀÛÀÌ ¾Æ´Ï¸ç, Javascript¿¡¼­ ÇÔ¼ö°¡ ÀÛµ¿ÇÏ´Â ¹æ½ÄÀÇ ÀÏºÎÀÔ´Ï´Ù.
-ÀÏ¹ÝÀûÀ¸·Î onClick={this.handleClick}°ú °°ÀÌ µÚ¿¡ ()¸¦ »ç¿ëÇÏÁö ¾Ê°í ¸Þ¼­µå¸¦ ÂüÁ¶ÇÒ °æ¿ì, ÇØ´ç ¸Þ¼­µå¸¦ ¹ÙÀÎµù ÇØ¾ß ÇÕ´Ï´Ù.
+ì´ëŠ” Reactë§Œì˜ íŠ¹ìˆ˜í•œ ë™ìž‘ì´ ì•„ë‹ˆë©°, Javascriptì—ì„œ í•¨ìˆ˜ê°€ ìž‘ë™í•˜ëŠ” ë°©ì‹ì˜ ì¼ë¶€ìž…ë‹ˆë‹¤.
+ì¼ë°˜ì ìœ¼ë¡œ onClick={this.handleClick}ê³¼ ê°™ì´ ë’¤ì— ()ë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šê³  ë©”ì„œë“œë¥¼ ì°¸ì¡°í•  ê²½ìš°, í•´ë‹¹ ë©”ì„œë“œë¥¼ ë°”ì¸ë”© í•´ì•¼ í•©ë‹ˆë‹¤.
 
-bind¸¦ È£ÃâÇÏ´Â °ÍÀÌ ºÒÆíÇÏ´Ù¸é, ÀÌ¸¦ ÇØ°áÇÒ ¼ö ÀÖ´Â µÎ °¡Áö ¹æ¹ýÀÌ ÀÖ½À´Ï´Ù.
-½ÇÇèÀûÀÎ ÆÛºí¸¯ Å¬·¡½º ÇÊµå ¹®¹ýÀ» »ç¿ëÇÏ°í ÀÖ´Ù¸é, Å¬·¡½º ÇÊµå¸¦ »ç¿ëÇÏ¿© ÄÝ¹éÀ» ¿Ã¹Ù¸£°Ô ¹ÙÀÎµùÇÒ ¼ö ÀÖ½À´Ï´Ù.
+bindë¥¼ í˜¸ì¶œí•˜ëŠ” ê²ƒì´ ë¶ˆíŽ¸í•˜ë‹¤ë©´, ì´ë¥¼ í•´ê²°í•  ìˆ˜ ìžˆëŠ” ë‘ ê°€ì§€ ë°©ë²•ì´ ìžˆìŠµë‹ˆë‹¤.
+ì‹¤í—˜ì ì¸ í¼ë¸”ë¦­ í´ëž˜ìŠ¤ í•„ë“œ ë¬¸ë²•ì„ ì‚¬ìš©í•˜ê³  ìžˆë‹¤ë©´, í´ëž˜ìŠ¤ í•„ë“œë¥¼ ì‚¬ìš©í•˜ì—¬ ì½œë°±ì„ ì˜¬ë°”ë¥´ê²Œ ë°”ì¸ë”©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 class LoggingButton extends React.Component {
-  // ÀÌ ¹®¹ýÀº `this`°¡ handleClick ³»¿¡¼­ ¹ÙÀÎµùµÇµµ·Ï ÇÕ´Ï´Ù.
-  // ÁÖÀÇ: ÀÌ ¹®¹ýÀº *½ÇÇèÀûÀÎ* ¹®¹ýÀÔ´Ï´Ù.
+  // ì´ ë¬¸ë²•ì€ `this`ê°€ handleClick ë‚´ì—ì„œ ë°”ì¸ë”©ë˜ë„ë¡ í•©ë‹ˆë‹¤.
+  // ì£¼ì˜: ì´ ë¬¸ë²•ì€ *ì‹¤í—˜ì ì¸* ë¬¸ë²•ìž…ë‹ˆë‹¤.
   handleClick = () => {
     console.log('this is:', this);
   }
@@ -335,55 +335,55 @@ class LoggingButton extends React.Component {
   }
 }
 
-ÀÌ ¹®¹ýÀÇ ¹®Á¦Á¡Àº LoggingButtonÀÌ ·»´õ¸µµÉ ¶§¸¶´Ù ´Ù¸¥ ÄÝ¹éÀÌ »ý¼ºµÈ´Ù´Â °ÍÀÔ´Ï´Ù. ´ëºÎºÐÀÇ °æ¿ì ¹®Á¦°¡ µÇÁö ¾ÊÀ¸³ª, ÄÝ¹éÀÌ ÇÏÀ§ ÄÄÆ÷³ÍÆ®¿¡ props·Î ¼­ Àü´ÞµÈ´Ù¸é ±× ÄÄÆ÷³ÍÆ®µéÀº Ãß°¡·Î ´Ù½Ã ·»´õ¸µÀ» ¼öÇàÇÒ ¼ö ÀÖ½À´Ï´Ù.
-ÀÌ·¯ÇÑ Á¾·ùÀÇ ¼º´É ¹®Á¦¸¦ ÇÇÇÏ°íÀÚ, »ý¼ºÀÚ ¾È¿¡¼­ ¹ÙÀÎµùÇÏ°Å³ª Å¬·¡½º ÇÊµå ¹®¹ýÀ» »ç¿ëÇÏ´Â °ÍÀ» ±ÇÀåÇÕ´Ï´Ù.
+ì´ ë¬¸ë²•ì˜ ë¬¸ì œì ì€ LoggingButtonì´ ë Œë”ë§ë  ë•Œë§ˆë‹¤ ë‹¤ë¥¸ ì½œë°±ì´ ìƒì„±ëœë‹¤ëŠ” ê²ƒìž…ë‹ˆë‹¤. ëŒ€ë¶€ë¶„ì˜ ê²½ìš° ë¬¸ì œê°€ ë˜ì§€ ì•Šìœ¼ë‚˜, ì½œë°±ì´ í•˜ìœ„ ì»´í¬ë„ŒíŠ¸ì— propsë¡œ ì„œ ì „ë‹¬ëœë‹¤ë©´ ê·¸ ì»´í¬ë„ŒíŠ¸ë“¤ì€ ì¶”ê°€ë¡œ ë‹¤ì‹œ ë Œë”ë§ì„ ìˆ˜í–‰í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ì´ëŸ¬í•œ ì¢…ë¥˜ì˜ ì„±ëŠ¥ ë¬¸ì œë¥¼ í”¼í•˜ê³ ìž, ìƒì„±ìž ì•ˆì—ì„œ ë°”ì¸ë”©í•˜ê±°ë‚˜ í´ëž˜ìŠ¤ í•„ë“œ ë¬¸ë²•ì„ ì‚¬ìš©í•˜ëŠ” ê²ƒì„ ê¶Œìž¥í•©ë‹ˆë‹¤.
 
-ÀÌº¥Æ® ÇÚµé¾î¿¡ ÀÎÀÚ Àü´ÞÇÏ±â
+ì´ë²¤íŠ¸ í•¸ë“¤ì–´ì— ì¸ìž ì „ë‹¬í•˜ê¸°
 
-·çÇÁ ³»ºÎ¿¡¼­´Â ÀÌº¥Æ® ÇÚµé·¯¿¡ Ãß°¡ÀûÀÎ ¸Å°³º¯¼ö¸¦ Àü´ÞÇÏ´Â °ÍÀÌ ÀÏ¹ÝÀûÀÔ´Ï´Ù. ¿¹¸¦ µé¾î, id°¡ ÇàÀÇ IDÀÏ °æ¿ì ´ÙÀ½ ÄÚµå°¡ ¸ðµÎ ÀÛµ¿ÇÕ´Ï´Ù.
+ë£¨í”„ ë‚´ë¶€ì—ì„œëŠ” ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ì— ì¶”ê°€ì ì¸ ë§¤ê°œë³€ìˆ˜ë¥¼ ì „ë‹¬í•˜ëŠ” ê²ƒì´ ì¼ë°˜ì ìž…ë‹ˆë‹¤. ì˜ˆë¥¼ ë“¤ì–´, idê°€ í–‰ì˜ IDì¼ ê²½ìš° ë‹¤ìŒ ì½”ë“œê°€ ëª¨ë‘ ìž‘ë™í•©ë‹ˆë‹¤.
 
 <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
 <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
 
-À§ µÎ ÁÙÀº µ¿µîÇÏ¸ç °¢°¢ È­»ìÇ¥ ÇÔ¼ö¿Í Function.prototype.bind¸¦ »ç¿ëÇÕ´Ï´Ù.
+ìœ„ ë‘ ì¤„ì€ ë™ë“±í•˜ë©° ê°ê° í™”ì‚´í‘œ í•¨ìˆ˜ì™€ Function.prototype.bindë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.
 
-µÎ °æ¿ì ¸ðµÎ React ÀÌº¥Æ®¸¦ ³ªÅ¸³»´Â e ÀÎÀÚ°¡ ID µÚ¿¡ µÎ ¹øÂ° ÀÎÀÚ·Î Àü´ÞµË´Ï´Ù.
-È­»ìÇ¥ ÇÔ¼ö¸¦ »ç¿ëÇÏ¸é ¸í½ÃÀûÀ¸·Î ÀÎÀÚ¸¦ Àü´ÞÇØ¾ß ÇÏÁö¸¸ bind¸¦ »ç¿ëÇÒ °æ¿ì Ãß°¡ ÀÎÀÚ°¡ ÀÚµ¿À¸·Î Àü´ÞµË´Ï´Ù.
+ë‘ ê²½ìš° ëª¨ë‘ React ì´ë²¤íŠ¸ë¥¼ ë‚˜íƒ€ë‚´ëŠ” e ì¸ìžê°€ ID ë’¤ì— ë‘ ë²ˆì§¸ ì¸ìžë¡œ ì „ë‹¬ë©ë‹ˆë‹¤.
+í™”ì‚´í‘œ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ë©´ ëª…ì‹œì ìœ¼ë¡œ ì¸ìžë¥¼ ì „ë‹¬í•´ì•¼ í•˜ì§€ë§Œ bindë¥¼ ì‚¬ìš©í•  ê²½ìš° ì¶”ê°€ ì¸ìžê°€ ìžë™ìœ¼ë¡œ ì „ë‹¬ë©ë‹ˆë‹¤.
 
 ############################################
 ############################################
-############### ½Ã¼¼ ¾Û ¸¸µé±â ##################
+############### ì‹œì„¸ ì•± ë§Œë“¤ê¸° ##################
 ############################################
 ############################################
 
-1. ¸ñ¾÷
-- ±¸Á¶¿Í JSONÀ¸·Î °¡Á®¿Ã °ª Á¤¸®ÇÏ±â
-  * ·Îµù Ã¢
-  Áß¾Ó ·Î°í, ¹Ù·Î ¾Æ·¡ÀÇ ·Îµù ¿ø?
+1. ëª©ì—…
+- êµ¬ì¡°ì™€ JSONìœ¼ë¡œ ê°€ì ¸ì˜¬ ê°’ ì •ë¦¬í•˜ê¸°
+  * ë¡œë”© ì°½
+  ì¤‘ì•™ ë¡œê³ , ë°”ë¡œ ì•„ëž˜ì˜ ë¡œë”© ì›?
   
-  # °ª
-  °´Ã¼ÀÇ ÇüÅÂ·Î ¸¸µé±â.
-  ±âÁØÀº ¾î¶²°É·Î?
-  ÇÊ¿äÇÑ °ª
-  0. ³¯Â¥
-  1. °ÔÀÓ ¸í
-  2. ·©Å·(Á¤·Ä ±âÁØ)
-  3. ±âÁØ
-  4. ¼­¹ö
-    4-1. ¼­¹ö ¸í
-    4-2. ±Ý¾×
+  # ê°’
+  ê°ì²´ì˜ í˜•íƒœë¡œ ë§Œë“¤ê¸°.
+  ê¸°ì¤€ì€ ì–´ë–¤ê±¸ë¡œ?
+  í•„ìš”í•œ ê°’
+  0. ë‚ ì§œ
+  1. ê²Œìž„ ëª…
+  2. ëž­í‚¹(ì •ë ¬ ê¸°ì¤€)
+  3. ê¸°ì¤€
+  4. ì„œë²„
+    4-1. ì„œë²„ ëª…
+    4-2. ê¸ˆì•¡
 
-  # ¸ñ¾÷ (Basic)
+  # ëª©ì—… (Basic)
   #root
     #header_top
       .link
       .logo
       .config_app
-    === ¼¼ºÎ ===
+    === ì„¸ë¶€ ===
       .back
       .subtitle
       [favorite_check]
-    #header_tab //¼¼ºÎÇ×¸ñÀÏ ¶§ ¾Èº¸ÀÓ.
+    #header_tab //ì„¸ë¶€í•­ëª©ì¼ ë•Œ ì•ˆë³´ìž„.
       .home
       .search_game
       .favorite_game
@@ -411,120 +411,120 @@ class LoggingButton extends React.Component {
 	#rank_list
 	  .item
 
-  # ¸ñ¾÷ (Detail)
-  root : ÀüÃ¼¸¦ Æ÷°ý
-    * ÇÊ¿äÇÑ °ª : 
-    header_top : ÃÖ»ó´Ü ¸Þ´º, Å¾´Ù¿î ±×¶óµ¥ÀÌ¼Ç ÀÖÀ½.
-      1. ±âº» È­¸é ----------
-      link : Å¬¸¯ ½Ã À¥ÆäÀÌÁö Ãâ·Â.
-      logo : µ¿ÀÛ ¾ø´Â ÀÌ¹ÌÁö, ¹è°æÀ¸·Î ³ÖÀ¸¸é ÇØ°áµÉÁöµµ...
-      setting : ¼³Á¤? Ã¢À¸·Î ÀÌµ¿....
-	[¼¼ºÎÇ×¸ñ »óÅÂ]
-	- µî·ÏÇÑ °ü½É°ÔÀÓÀ» ÅÍÄ¡ÇßÀ» ¶§
-	  µÚ·Î°¡±â ¹öÆ°, ¼­¹ö ¸í, °ü½É »óÅÂ(³ë¶õ º°)
-      2. ¼¼ºÎ È­¸é ----------
-      back : µÚ·Î°¡±â ¹öÆ°
-      subtitle : ¼¼ºÎ ÆäÀÌÁöÀÏ ¶§ ÀÌ¸§ Ãâ·Â (°ü½É°ÔÀÓ > ¼­¹ö ¼±ÅÃ ½Ã ¼­¹ö¸í Ãâ·Â)
-      favorite : °ü½É°ÔÀÓ > ¼­¹ö ¼±ÅÃ ½Ã(°ü½É°ÔÀÓ > ¼­¹ö ¼±ÅÃ ½Ã ³ë¶õ º° Ãß°¡(Å¬¸¯ ½Ã °ü½É°ÔÀÓ¿¡¼­ »èÁ¦))
+  # ëª©ì—… (Detail)
+  root : ì „ì²´ë¥¼ í¬ê´„
+    * í•„ìš”í•œ ê°’ : 
+    header_top : ìµœìƒë‹¨ ë©”ë‰´, íƒ‘ë‹¤ìš´ ê·¸ë¼ë°ì´ì…˜ ìžˆìŒ.
+      1. ê¸°ë³¸ í™”ë©´ ----------
+      link : í´ë¦­ ì‹œ ì›¹íŽ˜ì´ì§€ ì¶œë ¥.
+      logo : ë™ìž‘ ì—†ëŠ” ì´ë¯¸ì§€, ë°°ê²½ìœ¼ë¡œ ë„£ìœ¼ë©´ í•´ê²°ë ì§€ë„...
+      setting : ì„¤ì •? ì°½ìœ¼ë¡œ ì´ë™....
+	[ì„¸ë¶€í•­ëª© ìƒíƒœ]
+	- ë“±ë¡í•œ ê´€ì‹¬ê²Œìž„ì„ í„°ì¹˜í–ˆì„ ë•Œ
+	  ë’¤ë¡œê°€ê¸° ë²„íŠ¼, ì„œë²„ ëª…, ê´€ì‹¬ ìƒíƒœ(ë…¸ëž€ ë³„)
+      2. ì„¸ë¶€ í™”ë©´ ----------
+      back : ë’¤ë¡œê°€ê¸° ë²„íŠ¼
+      subtitle : ì„¸ë¶€ íŽ˜ì´ì§€ì¼ ë•Œ ì´ë¦„ ì¶œë ¥ (ê´€ì‹¬ê²Œìž„ > ì„œë²„ ì„ íƒ ì‹œ ì„œë²„ëª… ì¶œë ¥)
+      favorite : ê´€ì‹¬ê²Œìž„ > ì„œë²„ ì„ íƒ ì‹œ(ê´€ì‹¬ê²Œìž„ > ì„œë²„ ì„ íƒ ì‹œ ë…¸ëž€ ë³„ ì¶”ê°€(í´ë¦­ ì‹œ ê´€ì‹¬ê²Œìž„ì—ì„œ ì‚­ì œ))
 
-    header_tab : ÅÇ ¸Þ´º, ¼¼ºÎ È­¸éÀÏ ¶§´Â ¾ø¾îÁø´Ù.
-      1. ±âº» È­¸é ----------
-	¼±ÅÃ ½Ã select Å¬·¡½º Ãß°¡ÇÏ±â?
+    header_tab : íƒ­ ë©”ë‰´, ì„¸ë¶€ í™”ë©´ì¼ ë•ŒëŠ” ì—†ì–´ì§„ë‹¤.
+      1. ê¸°ë³¸ í™”ë©´ ----------
+	ì„ íƒ ì‹œ select í´ëž˜ìŠ¤ ì¶”ê°€í•˜ê¸°?
       home
       search_game
       favorite_game
       trade_rank
-      tab_bar : ÅÇ ¼±ÅÃ ½Ã ¾Æ·¡·Î ¿òÁ÷ÀÎ´Ù.
-    container : ¸ÞÀÎ ³»¿ë Ãâ·Â(header_tab °ªÀÌ º¯°æµÉ ¶§ °°ÀÌ º¯ÇØ¾ß ÇÑ´Ù.
-      cont : ¸ÞÀÎ ÄÁÅÙÃ÷
-      banner : [È¨]ÅÇÀÏ ¶§ ÃÖÇÏ´Ü ¹è³Ê Ãâ·Â
+      tab_bar : íƒ­ ì„ íƒ ì‹œ ì•„ëž˜ë¡œ ì›€ì§ì¸ë‹¤.
+    container : ë©”ì¸ ë‚´ìš© ì¶œë ¥(header_tab ê°’ì´ ë³€ê²½ë  ë•Œ ê°™ì´ ë³€í•´ì•¼ í•œë‹¤.
+      cont : ë©”ì¸ ì»¨í…ì¸ 
+      banner : [í™ˆ]íƒ­ì¼ ë•Œ ìµœí•˜ë‹¨ ë°°ë„ˆ ì¶œë ¥
    
   
 
 
-  2. ÇÁ·¹ÀÓ
-    ÃÖ»ó´Ü ¸Þ´º
+  2. í”„ë ˆìž„
+    ìµœìƒë‹¨ ë©”ë‰´
     1	2   3
-    1. Å¬¸¯ ½Ã À¥ÆäÀÌÁö¸¦ ¿©´Â ¹öÆ°
-      - Å¬¸¯ ½Ã ¾È³»(°æ°í)Ã¢ÀÌ Ãâ·ÂµÈ´Ù.
-	[È®ÀÎ]À» Å¬¸¯ÇÏ¸é ¾ÆÀÌÅÛ¸Å´Ï¾Æ »çÀÌÆ®¿¡¼­ ½Ã¼¼ Á¤º¸¸¦ È®ÀÎÇÒ ¼ö ÀÖ´Ù.
-	[Ãë¼Ò]¸¦ Å¬¸¯ÇÏ¸é °æ°íÃ¢ÀÌ ²¨Áø´Ù.
-    2. ½Ã¼¼ ¾Û ¾ÆÀÌÄÜ
-      - ¾Æ¹« ±â´ÉÀÌ ¾ø´Ù.
-    3. ¼³Á¤ ¹öÆ°
-      - Å¬¸¯ ½Ã 1Àº µÚ·Î°¡±â ¹öÆ°, 2´Â "¼³Á¤" ÅØ½ºÆ®·Î ¹Ù²î°í 3Àº ¾ø¾îÁø´Ù.
-      - ³»ºÎ¿¡´Â Á¤º¸ > ¹öÀü (v 4. 1.53 ), °³ÀÎÁ¤º¸Ã³¸®¹æÄ§ > °³ÀÎÁ¤º¸Ã³¸®¹æÄ§ º¸±â (>) Å¬¸¯
-      [°³ÀÎÁ¤º¸Ã³¸®¹æÄ§] Å¬¸¯ ½Ã "¼³Á¤" > "°³ÀÎÁ¤º¸Ã³¸®¹æÄ§"À¸·Î º¯°æµÇ°í °³ÀÎÁ¤º¸Ã³¸®¹æÄ§ÀÌ Ãâ·ÂµÈ´Ù.
-  3. ÅÇ ¸Þ´º
+    1. í´ë¦­ ì‹œ ì›¹íŽ˜ì´ì§€ë¥¼ ì—¬ëŠ” ë²„íŠ¼
+      - í´ë¦­ ì‹œ ì•ˆë‚´(ê²½ê³ )ì°½ì´ ì¶œë ¥ëœë‹¤.
+	[í™•ì¸]ì„ í´ë¦­í•˜ë©´ ì•„ì´í…œë§¤ë‹ˆì•„ ì‚¬ì´íŠ¸ì—ì„œ ì‹œì„¸ ì •ë³´ë¥¼ í™•ì¸í•  ìˆ˜ ìžˆë‹¤.
+	[ì·¨ì†Œ]ë¥¼ í´ë¦­í•˜ë©´ ê²½ê³ ì°½ì´ êº¼ì§„ë‹¤.
+    2. ì‹œì„¸ ì•± ì•„ì´ì½˜
+      - ì•„ë¬´ ê¸°ëŠ¥ì´ ì—†ë‹¤.
+    3. ì„¤ì • ë²„íŠ¼
+      - í´ë¦­ ì‹œ 1ì€ ë’¤ë¡œê°€ê¸° ë²„íŠ¼, 2ëŠ” "ì„¤ì •" í…ìŠ¤íŠ¸ë¡œ ë°”ë€Œê³  3ì€ ì—†ì–´ì§„ë‹¤.
+      - ë‚´ë¶€ì—ëŠ” ì •ë³´ > ë²„ì „ (v 4. 1.53 ), ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨ > ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨ ë³´ê¸° (>) í´ë¦­
+      [ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨] í´ë¦­ ì‹œ "ì„¤ì •" > "ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨"ìœ¼ë¡œ ë³€ê²½ë˜ê³  ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨ì´ ì¶œë ¥ëœë‹¤.
+  3. íƒ­ ë©”ë‰´
     1	2   3	4
-    * ÀüÃ¼ÀûÀ¸·Î °¨½Î°í ÀÖ´Â ¿µ¿ªÀÌ ÀÖÀ½.
-    * ½º¿ÍÀÌÇÁ °¡´É
+    * ì „ì²´ì ìœ¼ë¡œ ê°ì‹¸ê³  ìžˆëŠ” ì˜ì—­ì´ ìžˆìŒ.
+    * ìŠ¤ì™€ì´í”„ ê°€ëŠ¥
 
-    1. È¨
-    - ·Îµù ÈÄ Ã¹ È­¸é, ¼±ÅÃ ½Ã ÇÏ´Ü¿¡ ÆÄ¶õ»ö °ÔÀÌÁö
-      - ÇØ´ç °ÔÀÌÁö´Â ¸Þ´º ¼±ÅÃ ½Ã ±× ¾Æ·¡ÂÊ±îÁö ÀÌµ¿ÇØ¾ß ÇÔ.
-      - ÀÌ°Í¸¸ µû·Î ¿µ¿ªÀ» Àâ¾Æ¼­ ¼±ÅÃµÈ »óÅÂ¿¡ ¸ÂÃç¼­ ¿òÁ÷¿©Áà¾ß ÇÒ °Í °°À½.
-      - 1 > 4 ¼±ÅÃÇßÀ» ¶§ 2, 3 À» °ÅÃÄ¼­ 4¿¡ µµÂøÇØ¾ß ÇÔ.
-      À§Ä¡º° Å¬·¡½º¸¦ Á¤ÇØ³õ°í? left °ªÀ» º¯°æÇÏ´Â ¹æÇâÀ¸·Î ÀÛ¼ºÇÏ¸é µÇ·Á³ª?
-      transition °É¾î³õ°í .3
-      select µÆÀ» ¶§ ÇÏ´ÜÀÇ ¸·´ë±âµµ º¯°æÇÏ´Â ¹æÇâ.
-      ÅÇ ¸Þ´º¿Í ¹Ú½º¸¦ ÇÏ³ª·Î ¹­°í nth-child »ç¿ëÇØ¼­ n¹øÂ° ÀÏ ¶§¸¶´Ù left °ª Á¤ÇØ³õ°í
-      nth-child.select ~ tab-bar{left:?}·Î ÇÏ¸é µÉ °Í °°À½.
-    ¾ÆÀÌÄÜ + "´ëÇ¥ °ÔÀÓ"
+    1. í™ˆ
+    - ë¡œë”© í›„ ì²« í™”ë©´, ì„ íƒ ì‹œ í•˜ë‹¨ì— íŒŒëž€ìƒ‰ ê²Œì´ì§€
+      - í•´ë‹¹ ê²Œì´ì§€ëŠ” ë©”ë‰´ ì„ íƒ ì‹œ ê·¸ ì•„ëž˜ìª½ê¹Œì§€ ì´ë™í•´ì•¼ í•¨.
+      - ì´ê²ƒë§Œ ë”°ë¡œ ì˜ì—­ì„ ìž¡ì•„ì„œ ì„ íƒëœ ìƒíƒœì— ë§žì¶°ì„œ ì›€ì§ì—¬ì¤˜ì•¼ í•  ê²ƒ ê°™ìŒ.
+      - 1 > 4 ì„ íƒí–ˆì„ ë•Œ 2, 3 ì„ ê±°ì³ì„œ 4ì— ë„ì°©í•´ì•¼ í•¨.
+      ìœ„ì¹˜ë³„ í´ëž˜ìŠ¤ë¥¼ ì •í•´ë†“ê³ ? left ê°’ì„ ë³€ê²½í•˜ëŠ” ë°©í–¥ìœ¼ë¡œ ìž‘ì„±í•˜ë©´ ë˜ë ¤ë‚˜?
+      transition ê±¸ì–´ë†“ê³  .3
+      select ëì„ ë•Œ í•˜ë‹¨ì˜ ë§‰ëŒ€ê¸°ë„ ë³€ê²½í•˜ëŠ” ë°©í–¥.
+      íƒ­ ë©”ë‰´ì™€ ë°•ìŠ¤ë¥¼ í•˜ë‚˜ë¡œ ë¬¶ê³  nth-child ì‚¬ìš©í•´ì„œ në²ˆì§¸ ì¼ ë•Œë§ˆë‹¤ left ê°’ ì •í•´ë†“ê³ 
+      nth-child.select ~ tab-bar{left:?}ë¡œ í•˜ë©´ ë  ê²ƒ ê°™ìŒ.
+    ì•„ì´ì½˜ + "ëŒ€í‘œ ê²Œìž„"
     
-    [°ª: °ÔÀÓ¸í + ÇØ´ç °ÔÀÓ ½Ã¼¼ ¸µÅ©]
-      2 * 6 »çÀÌÁî·Î µÇ¾îÀÖ´Ù.
-      ¸®´ÏÁöW	        ¸ÞÀÌÇÃ½ºÅä¸®
-      ¹Ù¶÷ÀÇ³ª¶ó:¿¬	        ¸®´ÏÁö2M
-      ¸®´ÏÁöM		¸®´ÏÁö
-      ´øÀü¾ØÆÄÀÌÅÍ		ÆÐ½º¿Àºê¿¢ÀÚÀÏ
-      ¿ùµå¿Àºê¿öÅ©·¡ÇÁÆ®:Å¬·¡½Ä	¹Ù¶÷ÀÇ³ª¶ó
-      ºí·¹ÀÌµå¾Ø¼Ò¿ï		¾ÆÀÌ¿Â
-    ÃÖÇÏ´Ü¿¡ ¹è³Ê ÀÖÀ½.
+    [ê°’: ê²Œìž„ëª… + í•´ë‹¹ ê²Œìž„ ì‹œì„¸ ë§í¬]
+      2 * 6 ì‚¬ì´ì¦ˆë¡œ ë˜ì–´ìžˆë‹¤.
+      ë¦¬ë‹ˆì§€W	        ë©”ì´í”ŒìŠ¤í† ë¦¬
+      ë°”ëžŒì˜ë‚˜ë¼:ì—°	        ë¦¬ë‹ˆì§€2M
+      ë¦¬ë‹ˆì§€M		ë¦¬ë‹ˆì§€
+      ë˜ì „ì•¤íŒŒì´í„°		íŒ¨ìŠ¤ì˜¤ë¸Œì—‘ìžì¼
+      ì›”ë“œì˜¤ë¸Œì›Œí¬ëž˜í”„íŠ¸:í´ëž˜ì‹	ë°”ëžŒì˜ë‚˜ë¼
+      ë¸”ë ˆì´ë“œì•¤ì†Œìš¸		ì•„ì´ì˜¨
+    ìµœí•˜ë‹¨ì— ë°°ë„ˆ ìžˆìŒ.
 
-    2. °ÔÀÓ°Ë»ö
-      ÃÖ»ó´Ü¿¡ °Ë»öÃ¢ÀÌ Á¸ÀçÇÑ´Ù.
-	- °Ë»öÃ¢Àº ¾ÆÀÌÄÜ°ú placeholder"°ÔÀÓ¸íÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä" °¡ ÀÖ°í È¸»ö ¹è°æÀÌ´Ù.
-      ÀÎ±â¼ø? °ÔÀÓ¸íÀÌ ³ª¿­µÇ¾î ÀÖ´Ù.
-	[¸®½ºÆ® ÇüÅÂ] 29°³
-	¸®´ÏÁöW, ¸ÞÀÌÇÃ½ºÅä¸®, ¹Ù¶÷ÀÇ³ª¶ó:¿¬, ¸®´ÏÁö2M, ¸®´ÏÁöM, ¸®´ÏÁö, ´øÀü¾ØÆÄÀÌÅÍ, ÆÐ½º¿Àºê¿¢ÀÚÀÏ, 
-	¿ùµå¿Àºê¿öÅ©·¡ÇÁÆ®:Å¬·¡½Ä, ¹Ù¶÷ÀÇ³ª¶ó, ºí·¹ÀÌµå¾Ø¼Ò¿ï, ¾ÆÀÌ¿Â, ¸¶ºñ³ë±â, ¸¶ºñ³ë±â¿µ¿õÀü, ¸®´ÏÁö2, 
-	°Å»ó, ·Î½ºÆ®¾ÆÅ©, ¿¡¿À½º·¹µå, V4, °¡µð¿ì½º, ´ÙÅ©¿¡µ§¿À¸®Áø, ¶ó±×³ª·ÎÅ©Á¦·Î, ºí·¹ÀÌµå¿£¼Ò¿ï2, ¼Ò¿ï¿öÄ¿, 
-	¾Æ½ºÅÚ¸®¾Æ, ¾ðµð¼À¹ö, ¿¤¸®¿Â, ¿Àµò:¹ßÇÒ¶ó¶óÀÌÂ¡, Æ®¸¯½ºÅÍM
-	- °Ë»öÃ¢¿¡ ÅØ½ºÆ® ÀÔ·Â ½Ã À§ÀÇ ¸ñ·Ï¿¡ ÀÖ´Â °ÔÀÓ¸¸ Ãâ·ÂµÈ´Ù.
-	  - Ãâ·ÂµÇ´Â ¼ø¼­µµ À§ÀÇ ¹è¿­ ¾Õ¿¡¼­ºÎÅÍ °Ë»öÇÑ´Ù.
-	- [°ÔÀÓ ¼±ÅÃ ½Ã]
-	  - ¾ÆÀÌÄÜ°ú ±âÁØ: "1¾ï ¸Þ¼Ò" ¿Í °°ÀÌ ´ÜÀ§º° ±Ý¾×ÀÌ Ãâ·ÂµÈ´Ù.
-	  - ÇÏ´Ü¿¡ Å×ÀÌºí ±¸Á¶·Î °ªÀÌ Ãâ·ÂµÈ´Ù.
-	  ¼­¹ö   |   Æò±Õ°¡   |   µî¶ô
+    2. ê²Œìž„ê²€ìƒ‰
+      ìµœìƒë‹¨ì— ê²€ìƒ‰ì°½ì´ ì¡´ìž¬í•œë‹¤.
+	- ê²€ìƒ‰ì°½ì€ ì•„ì´ì½˜ê³¼ placeholder"ê²Œìž„ëª…ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”" ê°€ ìžˆê³  íšŒìƒ‰ ë°°ê²½ì´ë‹¤.
+      ì¸ê¸°ìˆœ? ê²Œìž„ëª…ì´ ë‚˜ì—´ë˜ì–´ ìžˆë‹¤.
+	[ë¦¬ìŠ¤íŠ¸ í˜•íƒœ] 29ê°œ
+	ë¦¬ë‹ˆì§€W, ë©”ì´í”ŒìŠ¤í† ë¦¬, ë°”ëžŒì˜ë‚˜ë¼:ì—°, ë¦¬ë‹ˆì§€2M, ë¦¬ë‹ˆì§€M, ë¦¬ë‹ˆì§€, ë˜ì „ì•¤íŒŒì´í„°, íŒ¨ìŠ¤ì˜¤ë¸Œì—‘ìžì¼, 
+	ì›”ë“œì˜¤ë¸Œì›Œí¬ëž˜í”„íŠ¸:í´ëž˜ì‹, ë°”ëžŒì˜ë‚˜ë¼, ë¸”ë ˆì´ë“œì•¤ì†Œìš¸, ì•„ì´ì˜¨, ë§ˆë¹„ë…¸ê¸°, ë§ˆë¹„ë…¸ê¸°ì˜ì›…ì „, ë¦¬ë‹ˆì§€2, 
+	ê±°ìƒ, ë¡œìŠ¤íŠ¸ì•„í¬, ì—ì˜¤ìŠ¤ë ˆë“œ, V4, ê°€ë””ìš°ìŠ¤, ë‹¤í¬ì—ë´ì˜¤ë¦¬ì§„, ë¼ê·¸ë‚˜ë¡œí¬ì œë¡œ, ë¸”ë ˆì´ë“œì—”ì†Œìš¸2, ì†Œìš¸ì›Œì»¤, 
+	ì•„ìŠ¤í…”ë¦¬ì•„, ì–¸ë””ì…ˆë²„, ì—˜ë¦¬ì˜¨, ì˜¤ë”˜:ë°œí• ë¼ë¼ì´ì§•, íŠ¸ë¦­ìŠ¤í„°M
+	- ê²€ìƒ‰ì°½ì— í…ìŠ¤íŠ¸ ìž…ë ¥ ì‹œ ìœ„ì˜ ëª©ë¡ì— ìžˆëŠ” ê²Œìž„ë§Œ ì¶œë ¥ëœë‹¤.
+	  - ì¶œë ¥ë˜ëŠ” ìˆœì„œë„ ìœ„ì˜ ë°°ì—´ ì•žì—ì„œë¶€í„° ê²€ìƒ‰í•œë‹¤.
+	- [ê²Œìž„ ì„ íƒ ì‹œ]
+	  - ì•„ì´ì½˜ê³¼ ê¸°ì¤€: "1ì–µ ë©”ì†Œ" ì™€ ê°™ì´ ë‹¨ìœ„ë³„ ê¸ˆì•¡ì´ ì¶œë ¥ëœë‹¤.
+	  - í•˜ë‹¨ì— í…Œì´ë¸” êµ¬ì¡°ë¡œ ê°’ì´ ì¶œë ¥ëœë‹¤.
+	  ì„œë²„   |   í‰ê· ê°€   |   ë“±ë½
 
 	
-    3. °ü½É°ÔÀÓ
-      * ¾ÆÀÌÄÜ°ú "°ü½É°ÔÀÓ" ÅØ½ºÆ® ÀÖÀ½.
-      - ¾Æ¹«°Íµµ ¾ø´Â »óÅÂ¿¡¼­´Â Á¤Áß¾Ó¿¡ "¾Æ·¡ + ¹öÆ°À» »ç¿ëÇÏ¿© °ü½É°ÔÀÓÀ» Ãß°¡ ÇØÁÖ¼¼¿ä" ÅØ½ºÆ®°¡ Ãâ·ÂµÈ´Ù.
-	- °ü½É°ÔÀÓÀÌ ÀÖ´Ù¸é ÇØ´ç ÅØ½ºÆ®´Â ¾ø¾îÁø´Ù.
-      - ¸®½ºÆ®´Â ÃÖ»ó´Ü°ú ÃÖÇÏ´ÜÀÇ border´Â ¾ø´Ù.(first-child¸¸ bdt ¾ø¾Ö°í ÀüºÎ border-top Ãß°¡ÇÏ¸é µÉ °Í °°´Ù.
-      - ¿ìÃø ÇÏ´Ü¿¡ [+] ¾ÆÀÌÄÜÀÌ ÀÖÀ¸¸ç ÇØ´ç ¾ÆÀÌÄÜÀ» Å¬¸¯ÇØ °ü½É°ÔÀÓ > ¼­¹ö¸¦ Ãß°¡/ÆíÁýÇÒ ¼ö ÀÖ´Ù.
-      - [+] ¾ÆÀÌÄÜÀ» Å¬¸¯ÇÏ¸é +°¡ X·Î µ¹¾Æ°¡´Ù°¡ ¸ØÃá´Ù.
-      - ÆË¾÷?ÀÇ ÇüÅÂ·Î °íÁ¤µÈ À§Ä¡¿¡¼­ Ãâ·ÂµÈ´Ù.
-      - ¾ÆÀÌÄÜ°ú °ËÀº ¹è°æ, Èò ÅØ½ºÆ®°¡ Ãâ·ÂµÈ´Ù.
-      - [Ãß°¡ÇÏ±â]Å¬¸¯ ½Ã µÚ·Î°¡±â ¹öÆ°°ú Ãß°¡ÇÏ±â·Î ÃÖ»ó´ÜÀÌ º¯°æµÈ´Ù.
-        - ¸®½ºÆ® ÇüÅÂ·Î °ÔÀÓ ¸ñ·ÏÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù.
-	- °ÔÀÓ ¸ñ·Ï Å¬¸¯ ½Ã ¸®½ºÆ® ÇüÅÂ·Î µÈ ¼­¹ö ¸ñ·ÏÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù.
-	- ¼­¹ö Å¬¸¯ ½Ã ¾È³»(°æ°í)Ã¢ÀÌ Ãâ·ÂµÈ´Ù.
-	  - Ãâ·ÂµÇ´Â ¼ø¼­´Â Ãß°¡ÇÑ ¼ø¼­ÀÌ´Ù.
-	- Ãß°¡ÇÑ ¼­¹ö°¡ 10°³°¡ µÇ¸é ´õÀÌ»ó Ãß°¡ÇÒ ¼ö ¾ø°ÔµÈ´Ù.
-	  - Ãß°¡ÇÏ±â¸¦ Å¬¸¯ÇßÀ» ¶§ ¹ö±×·Î 10¹øÂ° ¼­¹ö·Î ³Ñ¾î°£´Ù.
-      - [ÆíÁýÇÏ±â]Å¬¸¯ ½Ã °ü½É°ÔÀÓ¿¡ Ãß°¡ÇÑ °ÔÀÓ ¸ñ·Ï ¿·¿¡ [-] ¾ÆÀÌÄÜÀÌ »ý±ä´Ù.
-	- [-] ¾ÆÀÌÄÜÀ» Å¬¸¯ÇßÀ» ¶§ ¾È³»(°æ°í)Ã¢ÀÌ Ãâ·ÂµÈ´Ù.
-	  - È®ÀÎ Å¬¸¯ ½Ã °ü½É °ÔÀÓÀº »èÁ¦µÈ´Ù.
+    3. ê´€ì‹¬ê²Œìž„
+      * ì•„ì´ì½˜ê³¼ "ê´€ì‹¬ê²Œìž„" í…ìŠ¤íŠ¸ ìžˆìŒ.
+      - ì•„ë¬´ê²ƒë„ ì—†ëŠ” ìƒíƒœì—ì„œëŠ” ì •ì¤‘ì•™ì— "ì•„ëž˜ + ë²„íŠ¼ì„ ì‚¬ìš©í•˜ì—¬ ê´€ì‹¬ê²Œìž„ì„ ì¶”ê°€ í•´ì£¼ì„¸ìš”" í…ìŠ¤íŠ¸ê°€ ì¶œë ¥ëœë‹¤.
+	- ê´€ì‹¬ê²Œìž„ì´ ìžˆë‹¤ë©´ í•´ë‹¹ í…ìŠ¤íŠ¸ëŠ” ì—†ì–´ì§„ë‹¤.
+      - ë¦¬ìŠ¤íŠ¸ëŠ” ìµœìƒë‹¨ê³¼ ìµœí•˜ë‹¨ì˜ borderëŠ” ì—†ë‹¤.(first-childë§Œ bdt ì—†ì• ê³  ì „ë¶€ border-top ì¶”ê°€í•˜ë©´ ë  ê²ƒ ê°™ë‹¤.
+      - ìš°ì¸¡ í•˜ë‹¨ì— [+] ì•„ì´ì½˜ì´ ìžˆìœ¼ë©° í•´ë‹¹ ì•„ì´ì½˜ì„ í´ë¦­í•´ ê´€ì‹¬ê²Œìž„ > ì„œë²„ë¥¼ ì¶”ê°€/íŽ¸ì§‘í•  ìˆ˜ ìžˆë‹¤.
+      - [+] ì•„ì´ì½˜ì„ í´ë¦­í•˜ë©´ +ê°€ Xë¡œ ëŒì•„ê°€ë‹¤ê°€ ë©ˆì¶˜ë‹¤.
+      - íŒì—…?ì˜ í˜•íƒœë¡œ ê³ ì •ëœ ìœ„ì¹˜ì—ì„œ ì¶œë ¥ëœë‹¤.
+      - ì•„ì´ì½˜ê³¼ ê²€ì€ ë°°ê²½, í° í…ìŠ¤íŠ¸ê°€ ì¶œë ¥ëœë‹¤.
+      - [ì¶”ê°€í•˜ê¸°]í´ë¦­ ì‹œ ë’¤ë¡œê°€ê¸° ë²„íŠ¼ê³¼ ì¶”ê°€í•˜ê¸°ë¡œ ìµœìƒë‹¨ì´ ë³€ê²½ëœë‹¤.
+        - ë¦¬ìŠ¤íŠ¸ í˜•íƒœë¡œ ê²Œìž„ ëª©ë¡ì„ í™•ì¸í•  ìˆ˜ ìžˆë‹¤.
+	- ê²Œìž„ ëª©ë¡ í´ë¦­ ì‹œ ë¦¬ìŠ¤íŠ¸ í˜•íƒœë¡œ ëœ ì„œë²„ ëª©ë¡ì„ í™•ì¸í•  ìˆ˜ ìžˆë‹¤.
+	- ì„œë²„ í´ë¦­ ì‹œ ì•ˆë‚´(ê²½ê³ )ì°½ì´ ì¶œë ¥ëœë‹¤.
+	  - ì¶œë ¥ë˜ëŠ” ìˆœì„œëŠ” ì¶”ê°€í•œ ìˆœì„œì´ë‹¤.
+	- ì¶”ê°€í•œ ì„œë²„ê°€ 10ê°œê°€ ë˜ë©´ ë”ì´ìƒ ì¶”ê°€í•  ìˆ˜ ì—†ê²Œëœë‹¤.
+	  - ì¶”ê°€í•˜ê¸°ë¥¼ í´ë¦­í–ˆì„ ë•Œ ë²„ê·¸ë¡œ 10ë²ˆì§¸ ì„œë²„ë¡œ ë„˜ì–´ê°„ë‹¤.
+      - [íŽ¸ì§‘í•˜ê¸°]í´ë¦­ ì‹œ ê´€ì‹¬ê²Œìž„ì— ì¶”ê°€í•œ ê²Œìž„ ëª©ë¡ ì˜†ì— [-] ì•„ì´ì½˜ì´ ìƒê¸´ë‹¤.
+	- [-] ì•„ì´ì½˜ì„ í´ë¦­í–ˆì„ ë•Œ ì•ˆë‚´(ê²½ê³ )ì°½ì´ ì¶œë ¥ëœë‹¤.
+	  - í™•ì¸ í´ë¦­ ì‹œ ê´€ì‹¬ ê²Œìž„ì€ ì‚­ì œëœë‹¤.
       
-    4. °Å·¡¼øÀ§
-      * ¾ÆÀÌÄÜ°ú ÇöÀç ³¯Â¥°¡ Ãâ·ÂµÈ´Ù. YYYY³â MM¿ù DDÀÏ ¼øÀ§
-      ±¸Á¶´Â Å×ÀÌºíÀÇ ÇüÅÂ·Î Ãâ·ÂÇÏ¸é µÉ °Í °°´Ù.
-      ¼øÀ§   |   °ÔÀÓ¸í   |   µî¶ô
-      - ¼øÀ§´Â 1~30±îÁö 30°³°¡ Ãâ·ÂµÈ´Ù.
-      - °ÔÀÓ¸íÀº °ÔÀÓ¸í ±×´ë·Î °¡Á®¿À¸é µÉ °Í °°´Ù.
-      - µî¶ôÀº ÀüÀÏ °ª°ú ´çÀÏ °ª¿¡¼­ »ïÇ×¿¬»êÀÚ?¸¦ ÀÌ¿ëÇÏ¸é ±¦ÂúÀ» °Í °°´Ù.
-      if ¹®À¸·Î °°Àº°Å ¸ÕÀú »©°í »ïÇ×¿¬»êÀÚ·Î up, down °ü·ÃÇØ¼­ ºÐ·ùÇØÁÖ¸é µÉ °Í °°´Ù.
-      - ÇØ´ç °ÔÀÓ ¼±ÅÃ ½Ã °æ°íÃ¢ÀÌ Ãâ·ÂµÇ°í, [È®ÀÎ]¼±ÅÃ ½Ã À¥À¸·Î ÀÌµ¿ÇÑ´Ù.
+    4. ê±°ëž˜ìˆœìœ„
+      * ì•„ì´ì½˜ê³¼ í˜„ìž¬ ë‚ ì§œê°€ ì¶œë ¥ëœë‹¤. YYYYë…„ MMì›” DDì¼ ìˆœìœ„
+      êµ¬ì¡°ëŠ” í…Œì´ë¸”ì˜ í˜•íƒœë¡œ ì¶œë ¥í•˜ë©´ ë  ê²ƒ ê°™ë‹¤.
+      ìˆœìœ„   |   ê²Œìž„ëª…   |   ë“±ë½
+      - ìˆœìœ„ëŠ” 1~30ê¹Œì§€ 30ê°œê°€ ì¶œë ¥ëœë‹¤.
+      - ê²Œìž„ëª…ì€ ê²Œìž„ëª… ê·¸ëŒ€ë¡œ ê°€ì ¸ì˜¤ë©´ ë  ê²ƒ ê°™ë‹¤.
+      - ë“±ë½ì€ ì „ì¼ ê°’ê³¼ ë‹¹ì¼ ê°’ì—ì„œ ì‚¼í•­ì—°ì‚°ìž?ë¥¼ ì´ìš©í•˜ë©´ ê´œì°®ì„ ê²ƒ ê°™ë‹¤.
+      if ë¬¸ìœ¼ë¡œ ê°™ì€ê±° ë¨¼ì € ë¹¼ê³  ì‚¼í•­ì—°ì‚°ìžë¡œ up, down ê´€ë ¨í•´ì„œ ë¶„ë¥˜í•´ì£¼ë©´ ë  ê²ƒ ê°™ë‹¤.
+      - í•´ë‹¹ ê²Œìž„ ì„ íƒ ì‹œ ê²½ê³ ì°½ì´ ì¶œë ¥ë˜ê³ , [í™•ì¸]ì„ íƒ ì‹œ ì›¹ìœ¼ë¡œ ì´ë™í•œë‹¤.
