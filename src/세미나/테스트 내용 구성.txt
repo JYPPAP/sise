@@ -1,0 +1,6 @@
+[특이사항]
+	1. jest랑 react-testing-library(rtl)랑 합쳐졌다.
+	2. jest에서 rtl을 사용할 수 있다.
+
+1. 테스트 할 내용
+  - State 변경 관련 테스트 작성하기
