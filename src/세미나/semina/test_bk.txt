@@ -1,0 +1,52 @@
+// import 'react-native';
+import React, {useEffect} from 'react';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+} from '@testing-library/react-native';
+// import userEvent from '@testing-library/user-event';
+import {renderHook, act} from '@testing-library/react-hooks';
+import {App, useTabChange} from '../App';
+
+describe('State 변경 테스트', () => {
+  test('첫 페이지가 홈 탭인지 확인', async () => {
+    const screen = render(<App />);
+
+    const element = screen.getByTestId('homeList');
+    expect(element).toBeUndefined();
+  });
+  // test('게임검색 탭 클릭시 tab 변경 확인', () => {
+  //   /*
+  //   1. 클릭 이벤트가 발생!
+  //     > 이벤트가 발생한 요소는 testId를 추가한 요소!
+  //   2. 클릭 이벤트 발생 후 expect로 값이 정상적으로 바뀌었는지 확인!
+  //     > 확인 성공 시 테스트 완료!
+  //   */
+  //   const element = screen.getByTestId('tabChangeSearch');
+  //   fireEvent.click(element);
+  //   const {result} = renderHook(() => useTabChange('rank'));
+  //   act(() => result.current[1]());
+  //   expect(result.current[0]).toBe('rank');
+  // });
+  // test('관심게임 탭 클릭시 tab 변경 확인', () => {
+  //   const {result} = renderHook(() => useTabChange('rank'));
+  //   act(() => result.current[1]());
+  //   expect(result.current[0]).toBe('rank');
+  // });
+  // test('거래순위 탭 클릭시 tab 변경 확인', () => {
+  //   const {result} = renderHook(() => useTabChange('rank'));
+  //   act(() => result.current[1]());
+  //   expect(result.current[0]).toBe('rank');
+  // });
+  // test('tab State 변경 함수 동작 확인', () => {
+  //   const {result} = renderHook(() => useTabChange());
+  //   expect(result.current[0]).toBe('home');
+  // });
+  // test('tab State 변경 함수 동작 확인 2', () => {
+  //   const {result} = renderHook(() => useTabChange('rank'));
+  //   act(() => result.current[1]());
+  //   expect(result.current[0]).toBe('rank');
+  // });
+});
