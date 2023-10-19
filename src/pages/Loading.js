@@ -1,11 +1,12 @@
+/*
 import React, {useState} from 'react';
 import '../loading.css';
 
 const Loading = ({setIsReady}) => {
     // setIsReady
-    /*
+    /!*
      onClick={() => setIsReady(true)}
-     */
+     *!/
     return (
         <div className="loading_wrap">
             <div className="load-dots">
@@ -20,4 +21,4 @@ const Loading = ({setIsReady}) => {
     );
 }
 
-export default Loading;
+export default Loading;*/

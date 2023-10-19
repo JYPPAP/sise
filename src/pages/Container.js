@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link, useSearchParams} from 'react-router-dom';
-import {IconTitle, ChangeUp, ChangeDown, ChangeNone, SearchIcon} from './IconBox';
-import {getGameList} from './game_data.js';
+import {IconTitle, ChangeUp, ChangeDown, ChangeNone, SearchIcon} from './icons/IconBox';
+import {getGameList} from './data/game_data.js';
 
 const Container = ({tab}) => {
     const gamelist = getGameList();
@@ -12,9 +12,7 @@ const Container = ({tab}) => {
     
     switch (tab) {
         case 'search':
-            tabContainer = (
-                <SearchList find={find} setFind={setFind} search={search} setSearch={setSearch} list={gamelist}/>
-            );
+            tabContainer = <SearchList find={find} setFind={setFind} search={search} setSearch={setSearch} list={gamelist}/>;
             break;
         case 'favorite':
             tabContainer = <FavoriteList list={gamelist} tab={tab} search={search} setSearch={setSearch}/>;
@@ -87,9 +85,6 @@ function SearchList({find, setFind, list}) {
 }
 
 function FavoriteList({tab}) {
-    // let favorite_list =
-    //   "로스트아크,루페온|로스트아크,실리안|로스트아크,니나브|로스트아크,카단";
-    // localStorage.setItem("favorite_list", favorite_list);
     let favorite_game = localStorage.getItem('favorite_list');
     let list_value;
     if (Boolean(favorite_game)) {

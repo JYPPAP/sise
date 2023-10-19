@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link, useParams} from 'react-router-dom';
-import {IconTitle, ChangeUp, ChangeDown, ChangeNone} from './IconBox';
-import {getGame} from './game_data';
-import {GetServerList} from './server_data';
+import {IconTitle, ChangeUp, ChangeDown, ChangeNone} from './icons/IconBox';
+import {getGame} from './data/game_data';
+import {GetServerList} from './data/server_data';
 
 const Games = () => {
     const params = useParams();

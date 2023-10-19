@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {getGame} from './game_data';
-import {IconTitle, ChangeUp, ChangeDown, ChangeNone} from './IconBox';
-import {GetServerList, getServer} from './server_data';
+import {getGame} from './data/game_data';
+import {IconTitle, ChangeUp, ChangeDown, ChangeNone} from './icons/IconBox';
+import {GetServerList, getServer} from './data/server_data';
 
 const ServerList = () => {
     const params = useParams();
@@ -10,15 +10,15 @@ const ServerList = () => {
     const serverInfo = getServer(params.serverName);
     const serverList = GetServerList();
     const [viewTable, setViewTable] = useState(true);
-    // console.log("🚀 ~ Games.js ");
-    // console.log("params");
-    // console.log(params);
-    // console.log("gameInfo");
-    // console.log(gameInfo);
-    // console.log("serverInfo");
-    // console.log(serverInfo);
-    // console.log("serverList");
-    // console.log(serverList);
+    console.log("🚀 ~ Games.js ");
+    console.log("params");
+    console.log(params);
+    console.log("gameInfo");
+    console.log(gameInfo);
+    console.log("serverInfo");
+    console.log(serverInfo);
+    console.log("serverList");
+    console.log(serverList);
     
     function getToday(i) {
         const date = new Date();
@@ -30,9 +30,8 @@ const ServerList = () => {
     }
     
     const list_value = serverList.map((item, i) => {
-        const changePrice =
-            Number(item.date_price[i].price) - Number(item.date_price[i + 1].price);
-        
+        const changePrice = Number(item.date_price[i].price) - Number(item.date_price[i + 1].price);
+        console.log(`changePrice: ${changePrice}`);
         let sign;
         if (changePrice > 0) {
             sign = <ChangeUp/>;

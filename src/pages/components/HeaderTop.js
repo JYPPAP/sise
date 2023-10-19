@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link, Outlet, useLocation, useNavigate, useParams} from 'react-router-dom';
-import {LinkIcon, ConfigIcon, BackIcon, StarIcon} from './IconBox';
+import {LinkIcon, ConfigIcon, BackIcon, StarIcon} from '../icons/IconBox';
 
 const HeaderTop = () => {
     const location = useLocation();
@@ -12,13 +12,9 @@ const HeaderTop = () => {
     const [star, setStar] = useState('false');
     
     useEffect(() => {
-        console.log('로컬스토리지에 저장된 값');
-        console.log(favorite);
-        console.log('현재 서버 정보');
-        console.log(serverInfo);
         const toggleStar = Boolean(Number(favorite.indexOf(serverInfo)) >= 0) || false;
         setStar(toggleStar);
-    }, [serverInfo]);
+    }, [favorite, serverInfo]);
     
     if (location.pathname === '/') {
         return (
